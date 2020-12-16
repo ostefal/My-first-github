@@ -1,0 +1,87 @@
+<!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) -->
+<!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) --><!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) -->
+<!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) --><!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) -->
+<!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) --><!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) -->
+<!-- Каскадные таблицы стилей (CSS, Cascading Style Sheets) -->
+
+http://htmlbook.ru/css
+/* здесь находятся комментарии */
+body {
+  font-size: small;
+  /* font-size: large; */
+}
+
+Присоединение CSS к HTML-документу   <!-- ************************* -->
+
+Метод 1: Встроенные стили (атрибут style)   <!-- ************************* -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Пример встроенных стилей</title>
+ </head>
+ <body> 
+  <p style="color: red;">Это текст будет отображаться красным цветом</p>
+ </body>
+</html>
+
+Метод 2: Глобальные таблицы стилей   <!-- ************************* -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Пример глобальных стилей</title>
+  <style type="text/css">
+   p { color: red; }
+  </style>
+ </head>
+ <body> 
+  <p>Это текст будет отображаться красным цветом</p>
+ </body>
+</html>
+
+Метод 3: Внешние таблицы стилей   <!-- ************************* -->
+<link rel="stylesheet" href="css/style.css">
+Значение атрибута тега <link> — rel остаётся неизменным независимо от кода
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Пример глобальных стилей</title>
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+  <p>Это текст будет отображаться красным цветом</p>
+ </body>
+</html>
+
+<!-- Основные селекторы в CSS -->
+<!-- Основные селекторы в CSS --><!-- Основные селекторы в CSS -->
+<!-- Основные селекторы в CSS -->
+
+Сгруппированные селекторы  <!-- ************************* -->
+p, ul, a { color: navy; }
+
+Селекторы идентификатора  <!-- ************************* -->
+<li id="catalog1234">Майка со смайликом</li>
+li#catalogl234 { color: red; } -допускается пропустить имя элемента
+#catalog1234 { color: red; }
+
+Селекторы классов  <!-- ************************* -->
+<h3 class="special">Этот заголовок будет оранжевого цвета</h3>
+<p>Этот текст будет стандартного цвета</p>
+<p class="special">Этот текст будет оранжевого цвета</p>
+<p class="special">Этот текст будет оранжевого цвета</p>
+p.special { color: orange; } - все абзацы класса
+.special { color: orange; } весь класса
+
+Селекторы потомков  <!-- ************************* -->
+li em { color: olive; } Символ пробела между име­нами элементов означает,
+что второй элемент должен содержаться внутри первого.
+
+<!-- Свойства --> <!-- ************************* --><!-- ************************* -->
+color: red - Это текст будет отображаться красным цветом
+background-color: red фон текста
+font-family: Georgia - шрифт будет Georgia
+text-transform: uppercase - ПРОПИСНЫЕ СИМВОЛЫ
+background-image: url(http://web.mindcraft.pro/images/bg.jpg) - Устанавливает фоновое изображение для элемента
