@@ -41,7 +41,7 @@ p {
   min-height: 100vh;
   padding: 8px 50px;
   background-color: #02f;
-  background-image: url("bg.svg");
+  background-image: url("\bg.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
