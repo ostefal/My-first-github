@@ -16,10 +16,14 @@ body {
 color: red - Это текст будет отображаться красным цветом
 background-color: red фон текста
 font-family: Georgia - шрифт будет Georgia
+font-style: normal | italic Курсивное начертание| oblique Наклонное начертание| inherit - Наследует значение родителя.
 text-transform: uppercase - ПРОПИСНЫЕ СИМВОЛЫ
 background-image: url(http://web.mindcraft.pro/images/bg.jpg) - Устанавливает фоновое изображение для элемента
 width: 200px; - ширина
 text-decoration: underline - Устанавливает подчеркнутый текст.
+width: 70%; - Ширина блока
+text-align - выравнивание текста в пределах элемента
+border: 3px dashed #18ff80; - рамка
 
 
 <!-- Присоединение CSS к HTML-документу -->   <!-- ************************* -->
@@ -133,6 +137,19 @@ li em { color: olive; } Символ пробела между име­нами 
  <img src="https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
  <p>выберет этот</p>
  <p>а этот уже нет</p>
+
+  <!-- Любой соседний элемент -->  <!-- ************************* -->
+  img ~ p {}  Этот код применит стили во всех <p>, идущих после <img>
+  <img src="https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+  <p>выберет этот</p>
+  <p>и этот</p>
+  <p>и этот</p>
+  <h6>этот нет</h6>
+  <p>и этот</p>
+  <p>и этот</p>
+  <h6>этот нет</h6>
+  <p>и этот</p>
+
 
 
 

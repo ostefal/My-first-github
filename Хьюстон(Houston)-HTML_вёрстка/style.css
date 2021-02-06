@@ -1,0 +1,29 @@
+body
+{
+width: 70%;
+margin: auto;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Arial, sans-serif;
+    padding-top: 1.2em;
+    /* border: 3px dashed #18ff80; */
+}
+
+h1{
+   font-size: 32px;
+}
+
+
+td, table, tr, th, thead {
+    border: 1px solid;
+    border-collapse: collapse;
+ }
+
+figure{
+    font-style: italic;
+    /* border: 3px dashed #18ff80; */
+    clear: both;
+    float: right;
+    width: 20%;
+}
