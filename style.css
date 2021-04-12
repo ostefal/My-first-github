@@ -1,28 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  }
+.modal__close {
+  position: absolute;
+  left: 0;
+  background-color: red;
+}
 
-.post {
-    background-color: aqua;
-    border: 1px solid #ff258b;
-    margin: 0px;
-    padding: 10px;
-  }
-  .post__header {
-    background-color: yellowgreen;
-    border: 1px solid #6625ff;
-  }
-  .post__content {
-    background-color: lemonchiffon;
-    border: 1px solid #000000;
-    margin-top: 100px;
-    padding: 0px; 
-  }
-
-внешний отступ у поста (верхний и нижний) - 20 пикселей;
-пост выровнен по центру (есть секретный способ сделать это с помощью margin, гугли);
-пост имеет ширину 550 пикселей;
-внутренние отступы шапки поста: верхний - 15 пикселей, левый и правый - 20, нижний - 0;
-внутренние отступы контента поста: все по 20 пикселей, кроме нижнего, он - 0;
-
+.modal__footer {
+  /* напиши свой код здесь */
+}
