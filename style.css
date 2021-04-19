@@ -1,9 +1,9 @@
-.modal__close {
-  position: absolute;
-  left: 0;
-  background-color: red;
+.modal_close {
+    position: absolute;
+    left: 0;
+    background-color: red;
 }
 
-.modal__footer {
-  /* напиши свой код здесь */
+.modal_footer {
+    /* напиши свой код здесь */
 }
