@@ -102,7 +102,6 @@ var abjective = [
     "пухлый",
     "противный"
 ]
-
 var words = [
     "выдра",
     "муха",
@@ -110,7 +109,6 @@ var words = [
     "мартышка",
     "крыса"
 ]
-
 var myTeaser = "У тебя " + bodyPart[Math.floor(Math.random() * bodyPart.length)] + " словно " + abjective[Math.floor(Math.random() * abjective.length)] +
     " " + words[Math.floor(Math.random() * words.length)] + "!!!";
 
