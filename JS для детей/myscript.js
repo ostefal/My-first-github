@@ -220,3 +220,98 @@
 // console.log(cat["name"]);
 // console.log(cat.age);
 
+// друзья элементы
+// var anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16] };
+// var dave = { name: "Дейв", age: 5, luckyNumbers: [3, 9, 40] };
+// var kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3] };
+
+// var friends = [anna, dave, kate];   // массив друзей
+
+// console.log(friends[2]);
+// console.log(friends[2].name);
+// console.log(friends[2].luckyNumbers[1]);
+
+// kate.luckyNumbers.push(6);
+// kate.luckyNumbers.unshift(5);
+// console.log(friends[2].luckyNumbers);
+
+// Учёт долгов
+
+// var owedMony = {};
+// owedMony["Джимми"] = 5;
+// owedMony["Анна"] = 7;
+
+// owedMony.Анна; // сколько задолжала анна
+// console.log(owedMony.Анна);
+// owedMony.Джимми += 3; // дмимми взял в долг ещё 3
+
+// console.log(owedMony);
+
+// Хранение фильмов
+// var muvies = {
+//     "В поисках немо": {
+//         releasDate: 2003,
+//         duration: 100,
+//         actors: ["Альберт Брукс", "Эллен Дедженерес", "Александр Гоулд"],
+//         format: "DVD"
+//     },
+//     "Звёздные войны: эпизод VI - Возвращение джедая": {
+//         releasDate: 1983,
+//         duration: 134,
+//         actors: ["Марк Хэмилл", "Харрисон Форд", "Кэрри Фишер"],
+//         format: "DVD"
+//     },
+//     "Гарри Поттер и Кубок огня": {
+//         releasDate: 2005,
+//         duration: 157,
+//         actors: ["Дэниел Редклиф", "Эмма Уотсон", "Руперт Гринт"],
+//         format: "Blu-rey"
+//     }
+// };
+
+// console.log(muvies["В поисках немо"]);
+
+// var cars = { // создаём новый объект
+//     releasDate: 2006,
+//     duration: 117,
+//     actors: ["Оулэн Уилсон", "Бони Хант", "Пол Ньюман"],
+//     format: "Blu-rey"
+// }
+
+// muvies["Тачки"] = cars; // добавляем его в массив
+
+// console.log(muvies);
+// muvies // проверяем
+
+// Object.keys(muvies); // смотрим ключи
+
+// console.log(muvies["В поисках немо"].duration);
+// muvies["Звёздные войны: эпизод VI - Возвращение джедая"].actors.push(111);
+// muvies["Звёздные войны: эпизод VI - Возвращение джедая"].new = "Значение";
+// muvies["Звёздные войны: эпизод VI - Возвращение джедая"].actors[1] = 345;
+// console.log(muvies["Звёздные войны: эпизод VI - Возвращение джедая"].actors);
+
+// var namer = "Alex";
+// console.log("Hello "+ namer);
+// if (namer.length > 6) {
+//     console.log("Ну и длинющее у Вас имя!");
+// }
+
+// else {
+//     console.log("Имя у вас не из длинных");
+// }
+
+// var lemonChicken = false;
+// var beefWithBlackBean = false;
+// var sweetAndSourPork = false;
+
+// if (lemonChicken) {
+//     console.log("Отлично! Я буду курицу!!!")
+// } else if (beefWithBlackBean) {
+//     console.log("Заказываю говядину!")    
+// } else if (sweetAndSourPork) {
+//     console.log("Ладно, закажу свинину...") 
+// } else {
+//     console.log("Что же, остаётся рис с яйцом") 
+// }
+
