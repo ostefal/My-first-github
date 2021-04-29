@@ -315,3 +315,79 @@
 //     console.log("Что же, остаётся рис с яйцом") 
 // }
 
+// var sheepCounted = 1;
+// while (sheepCounted <= 10) {
+//     console.log("Овца № " + sheepCounted + "!");
+//     sheepCounted++;
+// }
+// console.log("Хрррррррррр-псссссссс....")
+
+// var Hello = 30;
+// for (index = 0; index < Hello; index++) {
+//     console.log("Привет");
+// }
+
+// var animals = ["Лев", "Фламинго", "Белый медведь", "Удав"];
+
+// var words = "Алексей";
+// for (i = 0; i < words.length; i++) {
+//     console.log("В моём имени есть буква - " + words[i]);
+// }
+
+// for (x = 3; x < 10000; x = x*3) {
+//     console.log(x);
+// }
+
+// var x = 3;
+// while (x<10000) {
+//     console.log(x = x*3);
+// }
+
+// var animals = [
+//     "Кот",
+//     "Рыба",
+//     "Лемур",
+//     "Комодский варан"
+// ];
+
+// beautifulAnimals = " - прекрасное животное";
+
+// for (i = 0; i < animals.length; i++) {
+//     animals[i] = animals[i] + beautifulAnimals;
+// }
+// console.log(animals);
+
+// var alphabet = " !  , абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+// var say = "";
+
+// while (say.length < 200) {
+//     say += (alphabet [Math.floor(Math.random()*alphabet.length)]);
+// }
+// console.log(say);
+
+var input = "javascript is awesome";
+var output = "";
+
+for (i = 0; i < input.length; i++) {
+    if (input[i] === "a") {
+        // console.log(input[i]);
+        console.log(output += 4);
+    } else if (input[i] === "e") {
+        // console.log(input[i]);
+        console.log(output += 3);
+    } else if (input[i] === "i") {
+        // console.log(input[i]);
+        console.log(output += 1);
+    } else if (input[i] === "o") {
+        // console.log(input[i]);
+        console.log(output += 0);
+    } else {console.log(output += input[i]);}
+}
+
+// for (i = 0; i < input.length; i++) {
+
+//     output += input[i];
+// }
+
+console.log(input.length);
+console.log(output);

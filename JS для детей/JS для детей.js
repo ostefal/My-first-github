@@ -2,9 +2,11 @@ Shift + Alt + F - отформатировать документ
 shift + alt + A - закоментить кусок кода. /* Комментарий */
 // Ctrl + /        - закоментить строку
 
-Math.random(); - случайный выбор
 Math.random(); - случайное число 0 <= число <1  (0.4683660550207769)
 Math.floor(); - округление до целых 
+Math.floor(Math.random()*10);   - от 0 до 9
+Math.floor(Math.random()*10)+1; - от 1 до 10. 
+
 
 // Считаем котиков
 var drawCats = function (howManyTimes) {
@@ -98,9 +100,9 @@ long_string.toLowerCase();
 
     // Булевы значения true и false. Логические операции
 
-    && - И(амперсанд).
-    || - ИЛИ(pipe пайпс - труба).
-    !  - НЕ().
+    && - И (амперсанд).
+    || - ИЛИ (pipe пайпс - труба).
+    !  - НЕ ().
 
 var isWeekend = false;
 var hadShower = true;
@@ -514,7 +516,7 @@ else {
     console.log("Имя у вас не из длинных");
 }
 
-// Цепочка из конструкций if else
+// Цепочка из конструкций if else if else if else if else if else if else if else if else 
 
 var lemonChicken = false;
 var beefWithBlackBean = false;
@@ -530,9 +532,109 @@ if (lemonChicken) {
     console.log("Что же, остаётся рис с яйцом");
 }
 
-while // Цикл
+// Цикл while while while while while while while while while while while while // Цикл
 
-
-while (condition) {
-    
+while (condition_условие) {
+    console.log("Делаем это при условии True");
+    i++; // счётчик 
 }
+
+// считаем овец
+var sheepCounted = 0;
+while (sheepCounted < 10) { // условие
+    console.log("Посчитано овец: " + sheepCounted + "!"); // выполняемый код
+    sheepCounted++;  // Приращение. Счётчик прибавляет к var по одному каждый цикл
+}
+console.log("Хрррррррррр-псссссссс....")
+
+// Цикл for for for for for for for for for for for for for for for for for for for for 
+
+for ( настройка; условие; приращение) {
+    console.log("Делаем это...пока условие верно true")
+}
+
+var Hello = 30;
+for (index = 0; index < Hello; index++) {
+    console.log("Привет");
+}
+var Hello = 30;
+for (i=0; i < Hello; i++) {
+    console.log("Привет");
+}
+
+// Цикл for , массивы
+
+var animals = ["Лев", "Фламинго", "Белый медведь", "Удав"]; 
+for (let i = 0; i < animals.length; i++) {// извлечение значений массива
+    console.log("В этом зоопарке есть "+ animals[i] + ".");
+}
+animals.length;
+4
+// Цикл for , строки
+var words = "Алексей";
+for (i = 0; i < words.length; i++) {
+    console.log("В моём имени есть буква - " + words[i]);
+}
+В моём имени есть буква - А
+В моём имени есть буква - л
+В моём имени есть буква - е
+В моём имени есть буква - к
+В моём имени есть буква - с
+В моём имени есть буква - е
+В моём имени есть буква - й
+
+for (x = 10; x < 10000; x = x*2) { // Степени двойки до 10 тысяч.
+    console.log(x);
+}
+for (x = 3; x < 10000; x = x*3) {  // Степени тройки до 10 тысяч.
+    console.log(x);
+}
+
+var x = 3;                      // Тоже самое в циклом While
+while (x < 10000) {
+    console.log(x = x*3);
+}
+
+var animals = [         // Преобразование массива с помощью цикла
+    "Кот",
+    "Рыба",
+    "Лемур",
+    "Комодский варан"
+];
+beautifulAnimal = " - прекрасное животное";
+for (i = 0; i < animals.length; i++) {
+    animals[i] = animals[i] + beautifulAnimal;
+}
+console.log(animals);
+0: "Кот - прекрасное животное"
+1: "Рыба - прекрасное животное"
+2: "Лемур - прекрасное животное"
+3: "Комодский варан - прекрасное животное"
+
+var alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";  // Генератор случайных строк
+var say = "";
+while (say.length < 200) {
+    say += (alphabet [Math.floor(Math.random()*alphabet.length)]);
+}
+console.log(say);
+
+var input = "javascript is awesome"; // Хакерский язык
+var output = "";                     // Сравнение и замена символов в строке
+
+for (i = 0; i < input.length; i++) {
+    if (input[i] === "a") {
+        // console.log(input[i]);
+        output += 4;
+    } else if (input[i] === "e") {
+        // console.log(input[i]);
+        output += 3;
+    } else if (input[i] === "i") {
+        // console.log(input[i]);
+        output += 1;
+    } else if (input[i] === "o") {
+        // console.log(input[i]);
+        output += 0;
+    } else {output += input[i];}
+}
+
+console.log(output);
