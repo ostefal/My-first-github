@@ -7,6 +7,20 @@ Math.floor(); - округление до целых
 Math.floor(Math.random()*10);   - от 0 до 9
 Math.floor(Math.random()*10)+1; - от 1 до 10. 
 
+alert("Всплывающее окно сверху с этим уведомлением"); alert - предупреждение
+
+confirm("Всплывающее окно Да или Нет.");  confirm - подтвердить. true или false.
+
+document.write("Жрём мороженное!");  document.write //позволяет вывести произвольную разметку 
+//HTML и контент в произвольной точке страницы.
+
+console.log("Выводит абсолютно любое сообщение на Консоль");
+
+prompt("Запрашивает данные в всплывающем окне сверху экрана");
+
+setTimeout(wakeUpUser, 5000);
+			  function wakeUpUser() {
+			  alert("Всплывающее окно сверху просит подтвержить действие через 5 сек.");
 
 // Считаем котиков
 var drawCats = function (howManyTimes) {
@@ -638,3 +652,21 @@ for (i = 0; i < input.length; i++) {
 }
 
 console.log(output);
+
+// Game the Висилица  // Game the Висилица  // Game the Висилица  // Game the Висилица  // Game the Висилица  
+
+prompt - запрос
+
+null = "null" - неявное приведение типа.
+
+confirm - подтвердить. Да или Нет. true или false. Диалоговое окно.
+
+var name = prompt("Как вас зовут?");
+console.log("Привет, " + name);
+
+var likesCats = confirm("Тебе нравятся кошки?");
+if (likesCats) {
+    console.log("Ты классная кошка!");
+} else {
+    console.log("Что ж, не проблема. Всё равно ты молодец!");
+}
