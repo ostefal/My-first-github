@@ -519,6 +519,7 @@ myCrazyObject["some array"][2]["namber"] // решение
 
 if - если    // Условия, условные конструкции
 else - иначе // Условия, условные конструкции
+while - цыкл
 
 var name = "Aleksey";
 console.log("Hello "+ name);
