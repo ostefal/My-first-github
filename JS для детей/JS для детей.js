@@ -519,7 +519,9 @@ myCrazyObject["some array"][2]["namber"] // решение
 
 if - если    // Условия, условные конструкции
 else - иначе // Условия, условные конструкции
-while - цыкл
+while - пока, до тех пор пока
+for - для // выполняется определённое колицество раз
+
 
 var name = "Aleksey";
 console.log("Hello "+ name);
@@ -546,6 +548,24 @@ if (lemonChicken) {
 } else {        // можно не использовать
     console.log("Что же, остаётся рис с яйцом");
 }
+
+// интерактивная версия  // интерактивная версия  // интерактивная версия
+if (lemonChicken = confirm("У Вас есть курица?")) { // интерактивная версия
+    console.log("Отлично! Я буду курицу!!!");
+} else if (beefWithBlackBean = confirm("Тогда может быть у Вас есть говядина?")) {
+    console.log("Заказываю говядину!");
+} else if (confirm(sweetAndSourPork = "Ну а свинина то есть?")) {
+    console.log("Ладно, закажу свинину...");
+} else {        // можно не использовать
+    var riceWithEgg = true;
+    sweetAndSourPork = false;
+    console.log("Что же, остаётся рис с яйцом");
+}
+
+console.log(lemonChicken);
+console.log(sweetAndSourPork);
+console.log(sweetAndSourPork)
+console.log(riceWithEgg);
 
 // Цикл while while while while while while while while while while while while // Цикл
 
@@ -576,6 +596,10 @@ var Hello = 30;
 for (i=0; i < Hello; i++) {
     console.log("Привет");
 }
+
+for (i = 1; i <= 5; i += 1) {
+    console.log("i = " + i);
+  }
 
 // Цикл for , массивы
 

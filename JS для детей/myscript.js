@@ -315,6 +315,23 @@
 //     console.log("Что же, остаётся рис с яйцом") 
 // }
 
+// интерактивная версия  // интерактивная версия  // интерактивная версия
+// if (lemonChicken = confirm("У Вас есть курица?")) { // интерактивная версия
+//     console.log("Отлично! Я буду курицу!!!");
+// } else if (beefWithBlackBean = confirm("Тогда может быть у Вас есть говядина?")) {
+//     console.log("Заказываю говядину!");
+// } else if (confirm(sweetAndSourPork = "Ну а свинина то есть?")) {
+//     console.log("Ладно, закажу свинину...");
+// } else {        // можно не использовать
+//     var riceWithEgg = true;
+//     sweetAndSourPork = false;
+//     console.log("Что же, остаётся рис с яйцом");
+// }
+// console.log(lemonChicken);
+// console.log(sweetAndSourPork);
+// console.log(sweetAndSourPork)
+// console.log(riceWithEgg);
+
 // var sheepCounted = 1;
 // while (sheepCounted <= 10) {
 //     console.log("Овца № " + sheepCounted + "!");
@@ -365,29 +382,48 @@
 // }
 // console.log(say);
 
-var input = "javascript is awesome";
-var output = "";
+// var input = "javascript is awesome";
+// var output = "";
 
-for (i = 0; i < input.length; i++) {
-    if (input[i] === "a") {
-        // console.log(input[i]);
-        console.log(output += 4);
-    } else if (input[i] === "e") {
-        // console.log(input[i]);
-        console.log(output += 3);
-    } else if (input[i] === "i") {
-        // console.log(input[i]);
-        console.log(output += 1);
-    } else if (input[i] === "o") {
-        // console.log(input[i]);
-        console.log(output += 0);
-    } else {console.log(output += input[i]);}
-}
+// for (i = 0; i < input.length; i++) {
+//     if (input[i] === "a") {
+//         // console.log(input[i]);
+//         console.log(output += 4);
+//     } else if (input[i] === "e") {
+//         // console.log(input[i]);
+//         console.log(output += 3);
+//     } else if (input[i] === "i") {
+//         // console.log(input[i]);
+//         console.log(output += 1);
+//     } else if (input[i] === "o") {
+//         // console.log(input[i]);
+//         console.log(output += 0);
+//     } else {console.log(output += input[i]);}
+// }
 
 // for (i = 0; i < input.length; i++) {
 
 //     output += input[i];
 // }
 
-console.log(input.length);
-console.log(output);
+// console.log(input.length);
+// console.log(output);
+
+// function testFactorial(a) {
+//     var x;
+//     x=1;
+//     for (i=1; i <= a; i++){
+//         x = x*i;}// Тут нужно написать решение
+//         return x;
+// }
+
+
+
+    var a = 5;
+
+    var x = 1;
+    for (i=1; i <= a; i++){
+        x=i*x;
+        // console.log(i);
+        console.log(x);
+    }
