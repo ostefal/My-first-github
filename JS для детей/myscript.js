@@ -419,11 +419,17 @@
 
 
 
-    var a = 5;
+    // var a = 10;
 
-    var x = 1;
-    for (i=1; i <= a; i++){
-        x=i*x;
-        // console.log(i);
-        console.log(x);
-    }
+    // var x = 1;
+    // for (i=1; i <= a; i++){
+    //     x=i*x;
+    //     // console.log(i);
+    //     console.log(x);
+    // }
+
+i = 10;
+
+for (x = 1; x < 10000; x = x*2) { // Степени двойки до 10 тысяч.
+    console.log(x);
+}
