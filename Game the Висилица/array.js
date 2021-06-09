@@ -524,43 +524,10 @@ var words = [
     "каллиграф",
     "эстетика",
     "глубокомыслие",
-    "безрассудство"
+    "безрассудство"    
 ];
-                                            // console.log(words);
+console.log(words); // возвращает массив в консоль
 
-// загаданное слово
-var word = words[Math.floor(Math.random() * words.length)];
-                                            console.log(word);
+var word = words[Math.floor(Math.random()*words.length)];
+console.log(word); // возвращает случайное слово из массива.
 
-// массив загадоного слова без значений
-var answerArray = [];
-for (var i = 0; i < word.length; i++) {
-    answerArray[i] = "_";
-}                                          // console.log(answerArray);
-
-// число букв слова = длинне слова
-var remainingLetters = word.length;
-
-// Игровой цикл
-while (remainingLetters > 0) {
-    alert(answerArray.join(" ")); // выводим состояние игры
-
-    var guessS = prompt("Угадайте букву или нажмите Отмена для выхода из игры");
-    guess = guessS.toLowerCase();
-    if (guess === null) {
-        break; // если игрок ничего не ввёл то выходим из игрового цикла
-    } else if (guess.length !== 1) {
-        alert("Пожалуйста, введите только одну букву");
-    } else {
-        // обновляем состояние игры
-        for (var j = 0; j < word.length; j++) {
-            if (word[j] === guess) {
-                answerArray[j] = guess;
-                remainingLetters--;
-            }
-        }
-    }
-}
-// Отображаем ответ и поздравляем игрока
-alert(answerArray.join(""));
-alert("Отлично! Ты молодец! Угадал слово " + word);
