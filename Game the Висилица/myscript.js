@@ -538,7 +538,7 @@ for (var i = 0; i < word.length; i++) {
     answerArray[i] = "_";
 }                                          // console.log(answerArray);
 
-// число букв слова = длинне слова
+// сколько букв осталось отгадать
 var remainingLetters = word.length;
 
 alert ("Привет! Давай поиграем в игру Виселица?                                          Я загадал слово "+ answerArray.join(" ")  +"!)) Теперь твоя очередь! Отгадывай по одной букве!!!" ) ;

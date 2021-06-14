@@ -418,18 +418,136 @@
 // }
 
 
+// // факториал (1 * 2 * 3 * 4 * 5) числа - a.
+//     var a = 5;
 
-    // var a = 10;
+//     var x = 1;
+//     for (i=1; i <= a; i++){
+//         x=i*x;
+//         // console.log(i);
+//         console.log(x);
+//     }
 
-    // var x = 1;
-    // for (i=1; i <= a; i++){
-    //     x=i*x;
-    //     // console.log(i);
-    //     console.log(x);
-    // }
+// for (x = 1; x < 10000; x = x*2) { // Степени двойки до 10 тысяч.
+//     console.log(x);
+// }
 
-i = 10;
+// var outFirstFunction = function(argument){
+//     console.log("Hallo, world!" + argument);
+// }
+// outFirstFunction(" Aleksey!)))");
+// outFirstFunction(" Lily!)))");
 
-for (x = 1; x < 10000; x = x*2) { // Степени двойки до 10 тысяч.
-    console.log(x);
+// var drawCats = function (howManyTimes) {
+//     for (i = 1; i <= howManyTimes; i++) {
+//         console.log(" =^.^=");
+//         }
+// }
+// drawCats(10);
+
+// var printMultipleTimes = function (howManyTimes, whatToDraw) {
+//     for (i = 0; i < howManyTimes; i++) {
+//         console.log(i + " " + whatToDraw);
+//     }
+// }
+// printMultipleTimes(17, " =^.^=");
+// printMultipleTimes(7, " >_<");
+
+// var bodyPart = [
+//     "глаз",
+//     "нос",
+//     "череп",
+//     "стул",
+//     "сосок",
+//     "палец"
+// ]
+// var abjective = [
+//     "гадкий",
+//     "вонючий",
+//     "грязный",
+//     "склизкий",
+//     "пухлый",
+//     "противный"
+// ]
+// var words = [
+//     "выдра",
+//     "муха",
+//     "дубина",
+//     "мартышка",
+//     "крыса"
+// ]
+
+// var PincRandomWord = function (name_massive) { // выбрать случайное слово
+//     return name_massive[Math.floor(Math.random() * words.length)];
+// }
+
+// var randomString = (
+//     "У тебя "+ PincRandomWord(bodyPart)+ 
+//     " словно " + PincRandomWord(abjective) 
+//     + " " + PincRandomWord(words) +"!!!"
+// );
+
+// console.log(randomString);
+
+// var GenerateDomInsult = function () {
+//     var bodyPart = [
+//     "глаз",
+//     "нос",
+//     "череп",
+//     "стул",
+//     "сосок",
+//     "палец"
+// ]
+// var abjective = [
+//     "гадкий",
+//     "вонючий",
+//     "грязный",
+//     "склизкий",
+//     "пухлый",
+//     "противный"
+// ]
+// var words = [
+//     "выдра",
+//     "муха",
+//     "дубина",
+//     "мартышка",
+//     "крыса"
+// ]
+
+// var PincRandomWord = function (name_massive) { // выбрать случайное слово
+//     return name_massive[Math.floor(Math.random() * words.length)];
+// }
+
+// var randomString = "У тебя "+ PincRandomWord(bodyPart)+ 
+//     " словно " + PincRandomWord(abjective) 
+//     + " " + PincRandomWord(words) +"!!!";
+//     console.log(randomString);
+// }
+// GenerateDomInsult();
+
+// var medalForScore = function (score) {
+//     if (score < 3) {
+//         return "Бронзовая";
+//     }
+//     if (score < 7) {
+//         return "Серебрянная";
+//     }
+//         return "Золотая";
+// };
+
+// console.log(medalForScore(8));
+
+// function add(par_1, par_2) {
+//         return par_1+par_2
+// };
+// function multiply(par_1, par_2) {
+//     return par_1*par_2
+// };
+
+// add(0,777) + multiply(36325,9824);
+
+// Совпадают ли массивы
+function areArraysSome(array_1,array_2) {
+    return array_1.join("") === array_2.join("");
 }
+areArraysSome([1,2,3,4,5] , [1,2,3,4,5])

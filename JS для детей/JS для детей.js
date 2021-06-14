@@ -7,6 +7,8 @@ Math.floor(); - округление до целых
 Math.floor(Math.random()*10);   - от 0 до 9
 Math.floor(Math.random()*10)+1; - от 1 до 10. 
 
+return - выход из функции, возвращение
+
 if - если    // Условия, условные конструкции
 else - иначе // Условия, условные конструкции
 
@@ -14,6 +16,8 @@ while - пока, до тех пор пока
 for - для // выполняется определённое колицество раз
 empty - пустой
 массив - array
+
+null = "null" - неявное приведение типа. JS автоматически приводит значение из значения в строку
 
 alert("Всплывающее окно сверху с этим уведомлением"); alert - предупреждение
 
@@ -197,7 +201,9 @@ if (age => 12) {
 // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ
 // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ
 // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ   // МАССИВЫ
+
 Array   Array   Array   Array   Array   Array   Array   Array   Array   Array   Array   
+
 
 [] - массив
 var name_massive = ["элемент", 354, ["ещё один массив в массиве", 001 , 100], 
@@ -290,9 +296,11 @@ animals;
 переменная.pop("Какой то элемент"); // удалить элемент в конеце массива.
 animals.pop();
 (4) ["Белый медведь", "Мартышка", "Кот", "Пёс"]
+
 переменная.shift("Какой то элемент");   /*  - удалить элемент в начале массива */
 animals.shift();
 (3) ["Мартышка", "Кот", "Пёс"]
+
 animals.shift();       - возвращает удаляемое значение Белый медведь
 "Белый медведь"
 lastAnimal = animals.shift();  - присваеваем удаляемое значение переменной
@@ -659,6 +667,15 @@ while (x < 10000) {
     console.log(x = x*3);
 }
 
+// факториал (1 * 2 * 3 * 4 * 5) числа - a.
+var a = 5;
+var x = 1;
+for (i=1; i <= a; i++){
+    x=i*x;
+    // console.log(i);
+    // console.log(x);
+}
+
 var animals = [         // Преобразование массива с помощью цикла
     "Кот",
     "Рыба",
@@ -703,13 +720,6 @@ for (i = 0; i < input.length; i++) {
 
 console.log(output);
 
-
-prompt - запрос
-
-null = "null" - неявное приведение типа. JS автоматически приводит значение из значения в строку
-
-confirm - подтвердить. Да или Нет. true или false. Диалоговое окно.
-
 var name = prompt("Как вас зовут?");
 console.log("Привет, " + name);
 
@@ -720,3 +730,142 @@ if (likesCats) {
     console.log("Что ж, не проблема. Всё равно ты молодец!");
 }
 
+// ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   
+// ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   
+// ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   ФУНКЦИИ function   
+
+"return" - выход из функции, возвращение.
+
+var имя_функции = function(аргумент_1, аргумент_2,аргумент_3){
+    console.log("Hallo, world!" + передан аргумент_1); // - что нужно сделать при вызове функции
+    console.log("Hallo, world!" + передан аргумент_2);
+}
+outFirstFunction(аргумент_1, аргумент_2); // - вызов функции
+
+// Привет мир Лёши, привет мир Лили!))
+var outFirstFunction = function(argument){ 
+    console.log("Hallo, world!" + argument);
+}
+outFirstFunction(" Aleksey!)))");
+outFirstFunction(" Lily!)))");
+
+// считаем котиков =)))
+var drawCats = function (howManyTimes) {
+    for (i = 1; i <= howManyTimes; i++) {
+        console.log(" =^.^=");
+        }
+}
+drawCats(10);
+
+// совмещаем 2 аргумента
+
+var printMultipleTimes = function (howManyTimes, whatToDraw) {
+    for (i = 0; i < howManyTimes; i++) {
+        console.log(i + " " + whatToDraw);
+    }
+}
+printMultipleTimes(10, " =^.^=");
+printMultipleTimes(7, " >_<");
+
+// Генератор случайных дразнилок
+var bodyPart = [
+    "глаз",
+    "нос",
+    "череп",
+    "стул",
+    "сосок",
+    "палец"
+]
+var abjective = [
+    "гадкий",
+    "вонючий",
+    "грязный",
+    "склизкий",
+    "пухлый",
+    "противный"
+]
+var words = [
+    "выдра",
+    "муха",
+    "дубина",
+    "мартышка",
+    "крыса"
+]
+
+var PincRandomWord = function (name_massive) { // выбрать случайное слово
+    return name_massive[Math.floor(Math.random() * words.length)];
+}
+
+var randomString = (
+    "У тебя "+ PincRandomWord(bodyPart)+ 
+    " словно " + PincRandomWord(abjective) 
+    + " " + PincRandomWord(words) +"!!!"
+);
+
+console.log(randomString);
+
+// Генератор случайных дразнилок в функции
+
+var GenerateDomInsult = function () {
+    var bodyPart = [
+    "глаз",
+    "нос",
+    "череп",
+    "стул",
+    "сосок",
+    "палец"
+]
+var abjective = [
+    "гадкий",
+    "вонючий",
+    "грязный",
+    "склизкий",
+    "пухлый",
+    "противный"
+]
+var words = [
+    "выдра",
+    "муха",
+    "дубина",
+    "мартышка",
+    "крыса"
+]
+
+var PincRandomWord = function (name_massive) { // выбрать случайное слово
+    return name_massive[Math.floor(Math.random() * words.length)];
+}
+
+var randomString = "У тебя "+ PincRandomWord(bodyPart)+ 
+    " словно " + PincRandomWord(abjective) 
+    + " " + PincRandomWord(words) +"!!!";
+    console.log(randomString);
+}
+GenerateDomInsult(); // запуск функции
+
+// Медали и счёт очков с выход с использованием return 
+var medalForScore = function (score) {// медаль за очки
+    if (score < 3) {
+        return "Бронзовая";
+    }
+    if (score < 7) {
+        return "Серебрянная";
+    }
+        return "Золотая";
+    }
+};
+console.log(medalForScore(8));
+
+// Математические рассчёты
+function add(par_1, par_2) { // прибавить
+    return par_1+par_2
+};
+function multiply(par_1, par_2) { // умножить
+return par_1*par_2
+};
+add(0,777) + multiply(36325,9824);
+
+// Совпадают ли массивы
+function areArraysSome(array_1,array_2) {
+    return array_1.join("") === array_2.join("");
+}
+areArraysSome([1,3,4,5] , [1,2,3,4,5])
