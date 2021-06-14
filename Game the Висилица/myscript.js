@@ -528,9 +528,9 @@ var words = [
 ];
                                             // console.log(words);
 
-// загаданное слово
-var word = words[Math.floor(Math.random() * words.length)];
-                                            console.log(word);
+var word = words[Math.floor(Math.random() * words.length)]; // загаданное слово
+console.log(word);
+
 
 // массив загадоного слова без значений
 var answerArray = [];
@@ -544,11 +544,13 @@ var remainingLetters = word.length;
 alert ("Привет! Давай поиграем в игру Виселица?                                          Я загадал слово "+ answerArray.join(" ")  +"!)) Теперь твоя очередь! Отгадывай по одной букве!!!" ) ;
 
 // Игровой цикл
-var AttemptCounter // Счётчик попыток 
-while (remainingLetters > 0) {
+var AttemptCounter = 0; // Счётчик попыток
+
+while (remainingLetters > 0 && AttemptCounter < answerArray.length) { // играем пока не отгадаем все буквы или не кончатся попытки
     alert(answerArray.join(" ")); // выводим состояние игры
 
     var guessS = prompt("Угадайте букву или нажмите Отмена для выхода из игры");
+
     var guess = guessS.toLowerCase(); // тЕрПИмостЬ к рЕгиСтру
 
     if (guess === null) {
@@ -556,18 +558,24 @@ while (remainingLetters > 0) {
     } /* else */ if (guess.length !== 1) {
         alert("Пожалуйста, введите только одну букву");
     } else {
+
+        AttemptCounter ++ ; // Счётчик попыток 
+
         // обновляем состояние игры
-        alert("Заходим в цокл For");
         for (var j = 0; j < word.length; j++) {
-            if (word[j] === guess) {
+
+            if (word[j] === guess && answerArray[j] === "_") {
                 answerArray[j] = guess;
                 remainingLetters--;
-
             }
         }
     }
 }
 
+if (answerArray.join("") === word) {
+    alert("Отлично! Ты молодец! Угадал слово " + word);
+} else {
+    alert("Ты мог бы угадать слово " + word + ". Поиграй ещё, тебе обязательно повезёт!))");
+}
 // Отображаем ответ и поздравляем игрока
-alert(answerArray.join(""));
-alert("Отлично! Ты молодец! Угадал слово " + word);
+
