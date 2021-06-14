@@ -541,26 +541,33 @@ for (var i = 0; i < word.length; i++) {
 // число букв слова = длинне слова
 var remainingLetters = word.length;
 
+alert ("Привет! Давай поиграем в игру Виселица?                                          Я загадал слово "+ answerArray.join(" ")  +"!)) Теперь твоя очередь! Отгадывай по одной букве!!!" ) ;
+
 // Игровой цикл
+var AttemptCounter // Счётчик попыток 
 while (remainingLetters > 0) {
     alert(answerArray.join(" ")); // выводим состояние игры
 
     var guessS = prompt("Угадайте букву или нажмите Отмена для выхода из игры");
-    guess = guessS.toLowerCase();
+    var guess = guessS.toLowerCase(); // тЕрПИмостЬ к рЕгиСтру
+
     if (guess === null) {
         break; // если игрок ничего не ввёл то выходим из игрового цикла
-    } else if (guess.length !== 1) {
+    } /* else */ if (guess.length !== 1) {
         alert("Пожалуйста, введите только одну букву");
     } else {
         // обновляем состояние игры
+        alert("Заходим в цокл For");
         for (var j = 0; j < word.length; j++) {
             if (word[j] === guess) {
                 answerArray[j] = guess;
                 remainingLetters--;
+
             }
         }
     }
 }
+
 // Отображаем ответ и поздравляем игрока
 alert(answerArray.join(""));
 alert("Отлично! Ты молодец! Угадал слово " + word);

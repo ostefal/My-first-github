@@ -721,13 +721,3 @@ if (likesCats) {
     console.log("Что ж, не проблема. Всё равно ты молодец!");
 }
 
-// Game the Висилица  // Game the Висилица  // Game the Висилица  // Game the Висилица  // Game the Висилица  
-
-var words = []; 
-
-var word = words[Math.floor(Math.random()*words.length)];  // загаданное слово
-
-var answerArray = []; // массив загадоного слова без значений
-for (var i = 0; i < word.length; i++) { // не i <= word.length последнее значение массива не равно длинне массива!!!
-    answerArray[i] = "_";
-}
