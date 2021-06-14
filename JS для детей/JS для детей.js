@@ -869,3 +869,19 @@ function areArraysSome(array_1,array_2) {
     return array_1.join("") === array_2.join("");
 }
 areArraysSome([1,3,4,5] , [1,2,3,4,5])
+
+DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+
+DOM - Document Object Model - объектная модель документа.A
+
+heading - заголовок
+
+document.getElementById("ID-имя" элемента ); - найти элемент ID-имя.
+
+document.getElementById("heading-2"); - найдёт нужный заголовок и присвоит переменной его значение.
+
+.innerHTML; - содержание элемента.
+

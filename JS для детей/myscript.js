@@ -547,7 +547,15 @@
 // add(0,777) + multiply(36325,9824);
 
 // Совпадают ли массивы
-function areArraysSome(array_1,array_2) {
-    return array_1.join("") === array_2.join("");
-}
-areArraysSome([1,2,3,4,5] , [1,2,3,4,5])
+// function areArraysSome(array_1,array_2) {
+//     return array_1.join("") === array_2.join("");
+// }
+// areArraysSome([1,2,3,4,5] , [1,2,3,4,5])
+
+// heading - заголовок
+
+
+var dom = document.getElementById("heading-2");
+
+console.log(dom);
+dom.innerHTML;
