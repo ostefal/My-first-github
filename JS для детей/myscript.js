@@ -552,10 +552,49 @@
 // }
 // areArraysSome([1,2,3,4,5] , [1,2,3,4,5])
 
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+
+
 // heading - заголовок
 
 
-var dom = document.getElementById("heading-2");
+// var headingElement = document.getElementById("main-heading");
+// var dom_2 = document.getElementById("heading-2");
 
-console.log(dom);
-dom.innerHTML;
+// headingElement.innerHTML;
+// dom_2.innerHTML;
+
+// console.log(headingElement.innerHTML);
+
+// var newHeadingText = prompt("Введите новый заголовок: ");
+// headingElement.innerHTML = newHeadingText;
+
+
+
+
+// setTimeout(wakeUpUser, 5000);
+// function wakeUpUser() {
+//     var newHeadingText = prompt("Введите новый заголовок: ");
+//     $("#main-heading").text(newHeadingText);
+// }
+
+// $("body").append("<p>Это новый параграф </p>");
+// $("#main-heading").append("<p>Это новый параграф </p>");
+
+// setTimeout(wakeUpUser, 5000); // перечисляем и добавляем 3 хобби на страницу спустя 5 сек.
+// function wakeUpUser() {
+//     for (var i = 0; i < 3; i++) {
+//         var hobby = prompt("Назови одно из своих хобби!");
+//         $("body").append("<p>" + hobby + "</p>");
+//     }
+// }
+
+
+    for (var i = 0; i < 3; i++) {
+        $("h2").hide(5000);
+        // $("h2").show(5000);
+    }
+
+

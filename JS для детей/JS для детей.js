@@ -559,6 +559,7 @@ else {
 }
 
 // Цепочка из конструкций if else if else if else if else if else if else if else if else 
+// Цепочка из конструкций if else if else if else if else if else if else if else if else 
 
 var lemonChicken = false;
 var beefWithBlackBean = false;
@@ -593,6 +594,8 @@ console.log(sweetAndSourPork)
 console.log(riceWithEgg);
 
 // Цикл while while while while while while while while while while while while // Цикл
+// Цикл while while while while while while while while while while while while // Цикл
+// Цикл while while while while while while while while while while while while // Цикл
 
 while (condition_условие) {
     console.log("Делаем это при условии True");
@@ -607,6 +610,7 @@ while (sheepCounted < 10) { // условие
 }
 console.log("Хрррррррррр-псссссссс....")
 
+// Цикл for for for for for for for for for for for for for for for for for for for for 
 // Цикл for for for for for for for for for for for for for for for for for for for for 
 // Цикл for for for for for for for for for for for for for for for for for for for for 
 
@@ -870,18 +874,75 @@ function areArraysSome(array_1,array_2) {
 }
 areArraysSome([1,3,4,5] , [1,2,3,4,5])
 
-DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
-DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
-DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
-DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
+// DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
 
-DOM - Document Object Model - объектная модель документа.A
+DOM - Document Object Model - объектная модель документа.
 
 heading - заголовок
 
-document.getElementById("ID-имя" элемента ); - найти элемент ID-имя.
+get Element By Id - получить элемент по ID.// Вернёт элемент.
+document.getElementById("ID-имя" элемента );// - найти элемент ID-имя.
+document.getElementById("main-heading");// - найдёт главный заголовок.
 
-document.getElementById("heading-2"); - найдёт нужный заголовок и присвоит переменной его значение.
+.innerHTML; - возвращает содержание элемента.
+headingElement.innerHTML; // вернёт содержание элемента
+console.log(headingElement.innerHTML); // выведет значение в консоль
 
-.innerHTML; - содержание элемента.
+var headingElement = document.getElementById("main-heading");// нашли элемент и присвоили его значение переменной
+headingElement.innerHTML;                                   // нашли содержимое элемента
+var newHeadingText = prompt("Введите новый заголовок ");    // нов переменная для нового значения заголовка
+headingElement.innerHTML = newHeadingText;                  // меняем значение заголовка
+
+// JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery
+// JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery 
+
+$ // - поиск HTML элементов. Принимает один аргумент - строка селектора.
+# // - id элемента.
+$("#main-heading")// - пример
+
+// изменить текст
+.text("замещаемый текст или переменная");// - изменить текст
+$("# id элемента").text("замещаемый текст или переменная"); // - изменить текст в элементе с id 
+$("#main-heading").text(newHeadingText);// - пример
+
+setTimeout(wakeUpUser, 5000); // меняем заголовок спустя 5 сек.
+function wakeUpUser() {
+    var newHeadingText = prompt("Введите новый заголовок: ");
+    $("#main-heading").text(newHeadingText);
+}
+
+// - добавить запись
+.append("что добавить"); // - добавление записи
+$("место куда добавить элемент").append("что добавить"); // - добавить элемент
+$("body").append("<p>Это новый параграф </p>");// - пример
+
+// - пример. Перечисляем и добавляем 3 хобби на страницу спустя 5 сек.
+setTimeout(wakeUpUser, 5000);
+function wakeUpUser() {
+    for (var i = 0; i < 3; i++) {
+        var hobby = prompt("Назови одно из своих хобби!");
+        $("body").append("<p>" + hobby + "</p>");
+    }
+}
+
+// затухание объекта, проявление объекта
+fade out - исчезать
+fade in появляться
+.slideUp(3000); // - выбранный объект исчеснет Уплывая Вверх за 3 секунды.
+.slideDown(5000);// - выбранный объект появится Опускаять Сверху за 3 секунды.
+.fadeOut(3000); // - выбранный элемент исчеснет за 3 секунды.
+.fadeIn(5000);  // - выбранный объект появится через 5 секунд.
+.hide(5000);    // - скрыть элемент в левый верхний угол с затуханием
+.show(5000);    // - вернуть объект из левого верхнего угла после затухания
+$("элемент").fadeOut(количесво милли секунд);
+$("h2").fadeOut(5000);// - пример
+$("h2").slideUp(5000);// - пример
+
+// цепной вызов анимации
+// - изменить текст в элементе с id и затушить его через 5 секунд
+$("# id элемента").text("замещаемый текст или переменная").slideUp(5000); // заменить текст и показать 
+$("h2").fadeOut(5000).fadeIn(5000); // - затушить потом вернуть текст за 10 сек.
 
