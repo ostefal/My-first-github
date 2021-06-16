@@ -591,10 +591,50 @@
 //     }
 // }
 
+    // for (var i = 0; i < 3; i++) {
+    //     $("h2").hide(5000);
+    //     $("h2").show(5000);
+    // }
 
-    for (var i = 0; i < 3; i++) {
-        $("h2").hide(5000);
-        // $("h2").show(5000);
-    }
+
+// перечисляю своих друзей и делаю их лучшими!
+// var friends = [
+//     "Lily",
+//     "Andru",
+//     "Anatoliy",
+//     "Helen",
+//     "Luba",
+//     "Alexandre",
+//     "Luna"
+// ]
+
+// setTimeout(wakeUpUser, 3000); // 
+// function wakeUpUser() {
+//     $("h1").text("Мои друзья");
+//     $("h2").hide(3000);
+//     for (i = 0; i < friends.length; i++) {
+//         $("body").append("<p>" + friends[i] + "</p>").hide(1).fadeIn(3000);
+//     }
+//     $("p").append(" лучший!!!");
+// }
+
+
+
+// мигающий заголовок с замедлением
+// for (i = 1; i <= 5; i++) { // мигающий заголовок с замедлением
+//     $("h1").hide(1).fadeIn(i*1000);
+// }
+
+
+
+// Отложенная анимация
+$("h2").fadeOut(3000).delay(5000).fadeIn(3000);
+
+
+
+// Метод fadeTo(,);
+$("h1").fadeTo(3000,0.5);
+
+
 
 
