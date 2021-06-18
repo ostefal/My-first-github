@@ -591,10 +591,10 @@
 //     }
 // }
 
-    // for (var i = 0; i < 3; i++) {
-    //     $("h2").hide(5000);
-    //     $("h2").show(5000);
-    // }
+// for (var i = 0; i < 3; i++) {
+//     $("h2").hide(5000);
+//     $("h2").show(5000);
+// }
 
 
 // перечисляю своих друзей и делаю их лучшими!
@@ -627,14 +627,171 @@
 
 
 
-// Отложенная анимация
-$("h2").fadeOut(3000).delay(5000).fadeIn(3000);
+// // Отложенная анимация
+// $("h2").fadeOut(3000).delay(5000).fadeIn(3000);
 
 
 
-// Метод fadeTo(,);
-$("h1").fadeTo(3000,0.5);
+// // Метод fadeTo(,);
+// $("h1").fadeTo(3000,0.5);
+
+
+//  Интерактивное программирование   Интерактивное программирование   Интерактивное программирование   Интерактивное программирование
+//  Интерактивное программирование   Интерактивное программирование   Интерактивное программирование   Интерактивное программирование
+
+// function timeUp() {
+//     alert("Время вышло");
+// }
+// setTimeout(timeUp,3000);
+// var timeoutId = setTimeout(timeUp,10000);// сохранил ID для отмены таймера
+// clearTimeout(timeoutId);// отменил таймер, сработет сразу
+
+
+// var doHomeWorkAlarm = function () {
+//     alert("Эй, пора делать домашку!");
+// };
+// var timeoutID = setTimeout(doHomeWorkAlarm,6000);
+// clearTimeout(timeoutID);
+
+
+// var couter = 5;
+// var printMassage = function(){
+//     console.log("Ты смотришь в консоль уже "+couter+" сек");
+//     couter+=5;
+// };
+// var intervalId = setInterval(printMassage,5000);
+// // clearInterval(intervalId);
+
+
+
+// // бегающая строка
+// var leftOffset = 0; // отступ слева
+// function moveHeading() { // подвинуть заголовок
+//     $("#heading").offset({left: leftOffset}); // найти элемент(строку) и прибавить слева пиксели
+//     leftOffset++;
+//     if (leftOffset>400) {   // как элемент достигнет края в 400 пикселей
+//     leftOffset=0;           // обнулиться/начать заново.
+//     }
+// };
+// setInterval(moveHeading,100) // вызывать функцию каждые 30 миллисекунд.
+
+
+
+// реакция на Клики
+// function clickHandler(event) {
+//     console.log("Клик! "+event.pageX+" "+event.pageY);
+// };
+// $("html").click(clickHandler);
+
+
+
+// // заголовок heading двигается за указателем мыши
+// $("html").mousemove(function (event) {
+//     $("#heading").offset({
+//         left: event.pageX,
+//         top: event.pageY
+//     });
+// });
+
+
+// // заголовок heading двигается за кликом мыши
+// $("html").click(function (event) {
+//     $("#heading").offset({
+//         left: event.pageX,
+//         top: event.pageY
+//     });
+// });
+// // и показывает их координаты в консоли
+// function clickHandler(event) {
+//     console.log("Клик! "+event.pageX+" "+event.pageY);
+// };
+// $("html").click(clickHandler);
 
 
 
 
+
+
+
+
+
+
+
+
+
+// var leftOffset = 0; // отступ слева
+// var rightOffset = 400;
+
+// function moveHeading() { // подвинуть заголовок
+
+
+
+//     if (leftOffset<400) {
+//         $("#heading").offset({left: leftOffset}); // найти элемент(строку) и прибавить слева пиксели
+//         leftOffset++;
+//     }
+//     if (leftOffset=401) {
+//         rightOffset = 400;
+//     }
+//     if (rightOffset<400) {   // как элемент достигнет края в 400 пикселей
+//         $("#heading").offset({left: rightOffset});
+//         rightOffset--;          
+//     }
+// };
+
+// setInterval(moveHeading,1) // вызывать функцию каждые 30 миллисекунд.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var direction = 'вправо';
+//     var offset = 0;
+
+//     // $("#heading").offset({ left: offset, top: offset });
+
+//     var moveHeading = function () {
+//       if (direction === 'вправо') {
+//         $("#heading").offset({ left: offset });
+//         offset++;
+//         if (offset > 200) {
+//           offset = 0;
+//           direction = 'вниз';
+//         }
+//       } else if (direction === 'вниз') {
+//         $("#heading").offset({ top: offset });
+//         offset++;
+//         if (offset > 200) {
+//           offset = 200;
+//           direction = 'влево';
+//         }
+//       } else if (direction === 'влево') {
+//         $("#heading").offset({ left: offset });
+//         offset--;
+//         if (offset < 0) {
+//           offset = 200;
+//           direction = 'вверх';
+//         }
+//       } else if (direction === 'вверх') {
+//         $("#heading").offset({ top: offset });
+//         offset--;
+//         if (offset < 0) {
+//           offset = 0;
+//           direction = 'вправо';
+//         }
+//       }
+//     };
+
+//     setInterval(moveHeading,1);
