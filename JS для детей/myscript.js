@@ -742,46 +742,48 @@
 // setInterval(moveHeading,1) // вызывать функцию каждые 30 миллисекунд.
 
 
-// движение заголовка по квадрату
-var direction = 'вправо';
-var offset = 8;
+// // движение заголовка по квадрату
+// var direction = 'вправо';
+// var offset = 8;
 
-    var moveHeading = function () {
+//     var moveHeading = function () {
 
-      if (direction === 'вправо') {
-        $("#heading").offset({ left: offset });
-        offset++;
-        if (offset > 200) {
-          offset = 416.6875;
-          direction = 'вниз';
-        }
-      } if (direction === 'вниз') {
-        $("#heading").offset({ top: offset });
-        offset++;
-        if (offset > 416.6875+200) {
-          offset = 200;
-          direction = 'влево';
-        }
-      } if (direction === 'влево') {
-        $("#heading").offset({ left: offset });
-        offset--;
-        if (offset < 8) {
-          offset = 416.6875+200;
-          direction = 'вверх';
-        }
-      } if (direction === 'вверх') {
-        $("#heading").offset({ top: offset });
-        offset--;
-        if (offset < 416.6875) {
-          offset = 8;
-          direction = 'вправо';
-        }
-      }
-    };
+//       if (direction === 'вправо') {
+//         $("#heading").offset({ left: offset });
+//         offset++;
+//         if (offset > 200) {
+//           offset = 416.6875;
+//           direction = 'вниз';
+//         }
+//       } if (direction === 'вниз') {
+//         $("#heading").offset({ top: offset });
+//         offset++;
+//         if (offset > 416.6875+200) {
+//           offset = 200;
+//           direction = 'влево';
+//         }
+//       } if (direction === 'влево') {
+//         $("#heading").offset({ left: offset });
+//         offset--;
+//         if (offset < 8) {
+//           offset = 416.6875+200;
+//           direction = 'вверх';
+//         }
+//       } if (direction === 'вверх') {
+//         $("#heading").offset({ top: offset });
+//         offset--;
+//         if (offset < 416.6875) {
+//           offset = 8;
+//           direction = 'вправо';
+//         }
+//       }
+//     };
 
-    var timeoutId = setInterval(moveHeading,100);
+//     var timeoutId = setInterval(moveHeading,100);
     
-    function stop() {
-        clearTimeout(timeoutId);
-    }
-    $("#heading").click(stop);  // останавливает движение по клику на заголовок
+//     function stop() {
+//         clearTimeout(timeoutId);
+//     }
+//     $("#heading").click(stop);  // останавливает движение по клику на заголовок
+
+
