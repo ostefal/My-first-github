@@ -1015,6 +1015,7 @@ function clickHandler(event) {
 };
 $("h1").click(clickHandler);
 
+
 // заголовок heading двигается за указателем мыши
 $("html").mousemove(function (event) {
     $("#heading").offset({
@@ -1022,6 +1023,7 @@ $("html").mousemove(function (event) {
         top: event.pageY
     });
 });
+
 
 // заголовок heading двигается за кликом мыши
 $("html").click(function (event) {
@@ -1035,3 +1037,50 @@ function clickHandler(event) {
     console.log("Клик! "+event.pageX+" "+event.pageY);
 };
 $("html").click(clickHandler);
+
+
+// движение заголовка по квадрату
+var direction = 'вправо';
+var offset = 0;
+
+    $("#heading").offset({ left: offset, top: offset });
+
+    var moveHeading = function () {
+
+      if (direction === 'вправо') {
+        $("#heading").offset({ left: offset });
+        offset++;
+        if (offset > 200) {
+          offset = 0;
+          direction = 'вниз';
+        }
+      } if (direction === 'вниз') {
+        $("#heading").offset({ top: offset });
+        offset++;
+        if (offset > 200) {
+          offset = 200;
+          direction = 'влево';
+        }
+      } if (direction === 'влево') {
+        $("#heading").offset({ left: offset });
+        offset--;
+        if (offset < 0) {
+          offset = 200;
+          direction = 'вверх';
+        }
+      } if (direction === 'вверх') {
+        $("#heading").offset({ top: offset });
+        offset--;
+        if (offset < 0) {
+          offset = 0;
+          direction = 'вправо';
+        }
+      }
+    };
+
+    var timeoutId = setInterval(moveHeading,100);
+    
+    function stop() {
+        clearTimeout(timeoutId);
+    }
+    $("#heading").click(stop); // останавливает движение по клику на заголовок
