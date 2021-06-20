@@ -709,91 +709,153 @@
 
 
 
+// //не очень получилось начало
+// // движение заголовка по квадрату
+// var direction = 'вправо';
+// var offset = 8;
 
+// var moveHeading = function () {
 
-
-
-
-
-
-
-
-
-// var leftOffset = 0; // отступ слева
-// var rightOffset = 400;
-
-// function moveHeading() { // подвинуть заголовок
-
-
-
-//     if (leftOffset<400) {
-//         $("#heading").offset({left: leftOffset}); // найти элемент(строку) и прибавить слева пиксели
-//         leftOffset++;
-//     }
-//     if (leftOffset=401) {
-//         rightOffset = 400;
-//     }
-//     if (rightOffset<400) {   // как элемент достигнет края в 400 пикселей
-//         $("#heading").offset({left: rightOffset});
-//         rightOffset--;          
+//     if (direction === 'вправо') {
+//         $("#heading").offset({ left: offset });
+//         offset++;
+//         if (offset > 200) {
+//             offset = 443.6875;
+//             direction = 'вниз';
+//         }
+//     } if (direction === 'вниз') {
+//         $("#heading").offset({ top: offset });
+//         offset++;
+//         if (offset > 443.6875 + 200) {
+//             offset = 200;
+//             direction = 'влево';
+//         }
+//     } if (direction === 'влево') {
+//         $("#heading").offset({ left: offset });
+//         offset--;
+//         if (offset < 8) {
+//             offset = 443.6875 + 200;
+//             direction = 'вверх';
+//         }
+//     } if (direction === 'вверх') {
+//         $("#heading").offset({ top: offset });
+//         offset--;
+//         if (offset < 443.6875) {
+//             offset = 8;
+//             direction = 'вправо';
+//         }
 //     }
 // };
+// // var timeoutId = setInterval(moveHeading, 100);
 
-// setInterval(moveHeading,1) // вызывать функцию каждые 30 миллисекунд.
+// // function stop() {
+// //     clearTimeout(timeoutId);
+// // }
+// // $("#heading").click(stop);  // останавливает движение по клику на заголовок
 
 
-// движение заголовка по квадрату
-var direction = 'вправо';
-var offset = 8;
+// // движение заголовка по квадрату - Игровая версия
+// var clickPlusSpeed = 100; // начальная скорость
+// var click = 0;
 
-var moveHeading = function () {
+// function game() {
 
-    if (direction === 'вправо') {
-        $("#heading").offset({ left: offset });
-        offset++;
-        if (offset > 200) {
-            offset = 416.6875;
-            direction = 'вниз';
-        }
-    } if (direction === 'вниз') {
-        $("#heading").offset({ top: offset });
-        offset++;
-        if (offset > 416.6875 + 200) {
-            offset = 200;
-            direction = 'влево';
-        }
-    } if (direction === 'влево') {
-        $("#heading").offset({ left: offset });
-        offset--;
-        if (offset < 8) {
-            offset = 416.6875 + 200;
-            direction = 'вверх';
-        }
-    } if (direction === 'вверх') {
-        $("#heading").offset({ top: offset });
-        offset--;
-        if (offset < 416.6875) {
-            offset = 8;
-            direction = 'вправо';
-        }
-    }
-};
-// var timeoutId = setInterval(moveHeading, 100);
+//     var intervalId = setInterval(moveHeading,clickPlusSpeed);//сохранил ID
+//     clickPlusSpeed /=2; // увеличил скорость в два раза
 
-// function stop() {
-//     clearTimeout(timeoutId);
+//     click ++;
+//     if (click >= 10) {
+//         $("#heading").text("Ты выйграл!!!");
+
+//         clearInterval(intervalId);
+//         return;
+//     }
+//     if (click === 1) {
+//         $("#heading").text("Кликнул "+ click +"раз.");
+//     } else {
+//         $("#heading").text("Кликнул "+ click +"раза.");
+//     }
 // }
-// $("#heading").click(stop);  // останавливает движение по клику на заголовок
 
 
-// движение заголовка по квадрату - Игровая версия
-var clickPlusSpeed = 100;
+// // считаю клики
+// // var click = 0;
+// // function score() {
+// //     click ++;
+// //     if (click >= 10) {
+// //         $("#heading").text("Ты выйграл!!!");
+// //         clearInterval(intervalId);
+// //         return;
+// //     }
+// //     if (click === 1) {
+// //         $("#heading").text("Кликнул "+ click +"раз.");
+// //     } else {
+// //         $("#heading").text("Кликнул "+ click +"раза.");
+// //     }
+// // };
 
-function game() {
-    var timeoutId = setInterval(moveHeading,1);
-    // if (clickPlusSpeed > 0) {
-        clickPlusSpeed -= 25;
-        console.log(clickPlusSpeed);
-    // }
-}
-$("#heading").click(game);
+
+// if (click < 10) {
+//     $("#main-heading").click(game)/* .click(score) */;
+// }else{
+//     clearInterval(intervalId);
+// }
+//  //не очень получилось конец.
+
+// вариант с сайта
+// var direction = 'вправо';
+// var offset = 8;
+// var intervalLength = 100;
+// var clicks = 0;
+
+// var moveHeading = function () {
+//   if (direction === 'вправо') {
+//     $("#heading").offset({ left: offset });
+//     offset++;
+//     if (offset > 200) {
+//       offset = 443.6875;
+//       direction = 'вниз';
+//     }
+//   } else if (direction === 'вниз') {
+//     $("#heading").offset({ top: offset });
+//     offset++;
+//     if (offset > 443.6875+200) {
+//       offset = 200;
+//       direction = 'влево';
+//     }
+//   } else if (direction === 'влево') {
+//     $("#heading").offset({ left: offset });
+//     offset--;
+//     if (offset < 8) {
+//       offset = 443.6875+200;
+//       direction = 'вверх';
+//     }
+//   } else if (direction === 'вверх') {
+//     $("#heading").offset({ top: offset });
+//     offset--;
+//     if (offset < 443.6875) {
+//       offset = 8;
+//       direction = 'вправо';
+//     }
+//   }
+// };
+
+// var intervalId = setInterval(moveHeading, intervalLength);
+// clearInterval(intervalId);
+
+// $("#heading").click(function () {
+//   clearInterval(intervalId);
+//   intervalLength /= 2;
+//   clicks++;
+//   if (clicks >= 10) {
+//     $("#heading").text("Накликал-таки!");
+//   } else {
+//     intervalId = setInterval(moveHeading, intervalLength)
+//     if (clicks === 1 || clicks === 5 || clicks === 6 || clicks === 7 || clicks === 8 || clicks === 9) {
+//         $("#heading").text("Кликнул "+ clicks +"раз.");
+//     } else {
+//         $("#heading").text("Кликнул "+ clicks +"раза.");
+//     }
+//   }
+// });
+

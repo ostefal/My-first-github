@@ -970,7 +970,8 @@ offset - отступ слева
 
 setTimeout(func,timeout); // установка таймера (функция,время)
 clearTimeout(timeoutId); // отмена таймера (ID таймера)
-setInterval(func,interval);// многократный запуск кода (функция,интервал/время)
+setInterval(func,interval);// многократный запуск кода- интервал (функция,интервал/время)
+clearInterval(intervalId);// остановка интервала
 .offset({left: 1000}); // вставить слева 1000 пикселей
 .offset({top: 1000}); // вставить сверху 1000 пикселей
 .pageX
@@ -1082,4 +1083,70 @@ function stop() {
 $("#heading").click(stop);  // останавливает движение по клику на заголовок
 
 
+// // не очень получилось начало
+// // движение заголовка по квадрату - Игровая версия
+// var clickPlusSpeed = 100; // начальная скорость
+// var click = 0;
 
+// function game() {
+
+//     var intervalId = setInterval(moveHeading,clickPlusSpeed);//сохранил ID
+//     clickPlusSpeed /=2; // увеличил скорость в два раза
+
+//     click ++;
+//     if (click >= 10) {
+//         $("#heading").text("Ты выйграл!!!");
+
+//         clearInterval(intervalId);
+//         return;
+//     }
+//     if (click === 1) {
+//         $("#heading").text("Кликнул "+ click +"раз.");
+//     } else {
+//         $("#heading").text("Кликнул "+ click +"раза.");
+//     }
+// }
+
+// // считаю клики
+// // var click = 0;
+// // function score() {
+// //     click ++;
+// //     if (click >= 10) {
+// //         $("#heading").text("Ты выйграл!!!");
+// //         clearInterval(intervalId);
+// //         return;
+// //     }
+// //     if (click === 1) {
+// //         $("#heading").text("Кликнул "+ click +"раз.");
+// //     } else {
+// //         $("#heading").text("Кликнул "+ click +"раза.");
+// //     }
+// // };
+
+
+// if (click < 10) {
+//     $("#main-heading").click(game)/* .click(score) */;
+// }else{
+//     clearInterval(intervalId);
+// }
+// //  не очень получилось конец.
+
+// Рабочая версия с сайта + мои добавления
+var intervalId = setInterval(moveHeading, intervalLength);
+clearInterval(intervalId);
+
+$("#heading").click(function () {
+  clearInterval(intervalId);
+  intervalLength /= 2;
+  clicks++;
+  if (clicks >= 10) {
+    $("#heading").text("Накликал-таки!");
+  } else {
+    intervalId = setInterval(moveHeading, intervalLength)
+    if (clicks === 1 || clicks === 5 || clicks === 6 || clicks === 7 || clicks === 8 || clicks === 9) {
+        $("#heading").text("Кликнул "+ clicks +"раз.");
+    } else {
+        $("#heading").text("Кликнул "+ clicks +"раза.");
+    }
+  }
+});
