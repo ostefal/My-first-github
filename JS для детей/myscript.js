@@ -694,18 +694,18 @@
 // });
 
 
-// // заголовок heading двигается за кликом мыши
-// $("html").click(function (event) {
-//     $("#heading").offset({
-//         left: event.pageX,
-//         top: event.pageY
-//     });
-// });
-// // и показывает их координаты в консоли
-// function clickHandler(event) {
-//     console.log("Клик! "+event.pageX+" "+event.pageY);
-// };
-// $("html").click(clickHandler);
+// заголовок heading двигается за кликом мыши
+$("html").click(function (ev) {
+    $("#heading").offset({
+        left: ev.pageX,
+        top: ev.pageY
+    });
+});
+// и показывает их координаты в консоли
+function clickHandler(ev) {
+    console.log("Клик! "+ev.pageX+" "+ev.pageY);
+};
+$("html").click(clickHandler);
 
 
 
@@ -802,7 +802,7 @@
 // }
 //  //не очень получилось конец.
 
-// вариант с сайта
+// // вариант с сайта
 // var direction = 'вправо';
 // var offset = 8;
 // var intervalLength = 100;
