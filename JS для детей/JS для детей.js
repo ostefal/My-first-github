@@ -35,9 +35,9 @@ setTimeout(wakeUpUser, 5000);
 			  function wakeUpUser() {
 			  alert("Всплывающее окно сверху просит подтвержить действие через 5 сек.");
               // Считаем котиков
-var drawCats = function (howManyTimes) {
-    for (var i = 0; i < howManyTimes; i++) {
-        console.log(i + "=^.^=");
+                var drawCats = function (howManyTimes) {
+                    for (var i = 0; i < howManyTimes; i++) {
+                    console.log(i + "=^.^=");
     };
 };
 drawCats(10);
@@ -885,18 +885,23 @@ areArraysSome([1,3,4,5] , [1,2,3,4,5])
 // DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
 // DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery   DOM JQuery
 
+
+// DOM  // DOM  // DOM  // DOM  // DOM  // DOM  // DOM
+
 DOM - Document Object Model - объектная модель документа.
-
 heading - заголовок
+get Element By Id // - получить элемент по ID.
+document.getElementById("ID-имя" элемента );// - найти элемент по ID-имени.
+.innerHTML;// - возвращает содержание элемента.
 
-get Element By Id - получить элемент по ID.// Вернёт элемент.
-document.getElementById("ID-имя" элемента );// - найти элемент ID-имя.
-document.getElementById("main-heading");// - найдёт главный заголовок.
-
-.innerHTML; - возвращает содержание элемента.
+Поиск элемента с помощью getElementById
+document.getElementById("main-heading");// - найдёт элемент по ID-имени "main-heading" - главный заголовок.
+var headingElement = document.getElementById("main-heading");// - присвоил переменной значение элемента для удобства
 headingElement.innerHTML; // вернёт содержание элемента
 console.log(headingElement.innerHTML); // выведет значение в консоль
+console.log(document.getElementById("main-heading").innerHTML); // выведет значение в консоль и таким способом(без переменной)
 
+Меняем текст заголовка через DOM
 var headingElement = document.getElementById("main-heading");// нашли элемент и присвоили его значение переменной
 headingElement.innerHTML;                                   // нашли содержимое элемента
 var newHeadingText = prompt("Введите новый заголовок ");    // нов переменная для нового значения заголовка
@@ -904,14 +909,18 @@ headingElement.innerHTML = newHeadingText;                  // меняем зн
 
 // JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery
 // JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery 
+Работа с деревом DOM через JQuery
 
 $ // - поиск HTML элементов. Принимает один аргумент - строка селектора.
 # // - id элемента.
 $("#main-heading")// - пример
-.text("что добавить");  // - изменить текст
+.text("на что заменить, изменить");  // - изменить текст
 .append("что добавить");// - добавление записи
 
-// изменить текст
+Подключаем JQuery к HTML-странице
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+Меняем текст заголовка с помощью jQuery
 .text("замещаемый текст или переменная");// - изменить текст
 $("# id элемента").text("замещаемый текст или переменная"); // - изменить текст в элементе с id 
 $("#main-heading").text(newHeadingText);// - пример

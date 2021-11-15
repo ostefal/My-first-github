@@ -560,18 +560,21 @@
 // heading - заголовок
 
 
-// var headingElement = document.getElementById("main-heading");
-// var dom_2 = document.getElementById("heading-2");
+var headingElement = document.getElementById("main-heading");  
+var dom_2 = document.getElementById("heading-2");
 
-// headingElement.innerHTML;
-// dom_2.innerHTML;
+headingElement.innerHTML;
+dom_2.innerHTML;
 
-// console.log(headingElement.innerHTML);
+console.log(headingElement.innerHTML);
+console.log(dom_2.innerHTML);
 
-// var newHeadingText = prompt("Введите новый заголовок: ");
-// headingElement.innerHTML = newHeadingText;
+function newHading() { // меняю заголовок спустя 3 сек.
+    var newHeadingText = prompt("Введите новый заголовок: ");
+    headingElement.innerHTML = newHeadingText;
+}
 
-
+setTimeout(newHading,3000);
 
 
 // setTimeout(wakeUpUser, 5000);
@@ -694,18 +697,18 @@
 // });
 
 
-// заголовок heading двигается за кликом мыши
-$("html").click(function (ev) {
-    $("#heading").offset({
-        left: ev.pageX,
-        top: ev.pageY
-    });
-});
-// и показывает их координаты в консоли
-function clickHandler(ev) {
-    console.log("Клик! "+ev.pageX+" "+ev.pageY);
-};
-$("html").click(clickHandler);
+// // заголовок heading двигается за кликом мыши
+// $("html").click(function (ev) {
+//     $("#heading").offset({
+//         left: ev.pageX,
+//         top: ev.pageY
+//     });
+// });
+// // и показывает их координаты в консоли
+// function clickHandler(ev) {
+//     console.log("Клик! "+ev.pageX+" "+ev.pageY);
+// };
+// $("html").click(clickHandler);
 
 
 
