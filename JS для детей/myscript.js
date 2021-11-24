@@ -560,43 +560,74 @@
 // heading - заголовок
 
 
-var headingElement = document.getElementById("main-heading");  
-var dom_2 = document.getElementById("heading-2");
+// var headingElement = document.getElementById("main-heading");  
+// var dom_2 = document.getElementById("heading-2");
 
-headingElement.innerHTML;
-dom_2.innerHTML;
+// headingElement.innerHTML;
+// dom_2.innerHTML;
 
-console.log(headingElement.innerHTML);
-console.log(dom_2.innerHTML);
+// console.log(headingElement.innerHTML);
+// console.log(dom_2.innerHTML);
 
-function newHading() { // меняю заголовок спустя 3 сек.
-    var newHeadingText = prompt("Введите новый заголовок: ");
-    headingElement.innerHTML = newHeadingText;
-}
+// function newHading() { // меняю заголовок спустя 3 сек.
+    // var newHeadingText = prompt("Введите новый заголовок: ");
+//     headingElement.innerHTML = newHeadingText;
+// }
+// setTimeout(newHading,3000);
 
-setTimeout(newHading,3000);
 
 
-// setTimeout(wakeUpUser, 5000);
+// Меняем текст заголовка(элемента) с помощью jQuery
+
+// var newHeadingText = prompt("Введите новый заголовок: ");
+// $("#main-heading").text(newHeadingText);
+
+
+// Меняем текст заголовка(элемента) с помощью jQuery спустя 1 сек.
+
+// setTimeout(wakeUpUser, 0001);
 // function wakeUpUser() {
 //     var newHeadingText = prompt("Введите новый заголовок: ");
 //     $("#main-heading").text(newHeadingText);
 // }
 
+
+
+// Создание новых элементов через JQuery
+
 // $("body").append("<p>Это новый параграф </p>");
 // $("#main-heading").append("<p>Это новый параграф </p>");
 
-// setTimeout(wakeUpUser, 5000); // перечисляем и добавляем 3 хобби на страницу спустя 5 сек.
+
+
+// перечисляем и добавляем 3 хобби на страницу спустя 5 сек.
+
+// setTimeout(wakeUpUser, 5000); 
 // function wakeUpUser() {
-//     for (var i = 0; i < 3; i++) {
-//         var hobby = prompt("Назови одно из своих хобби!");
-//         $("body").append("<p>" + hobby + "</p>");
-//     }
+    // for (var i = 0; i < 3; i++) {
+    //     var hobby = prompt("Назови одно из своих хобби!");
+    //     $("body").append("<p>" + hobby + "</p>");
+    // }
 // }
 
+
+
+// Анимация элементов средствами JQuery
+
+// $("h1").fadeOut(3000) // - пример исчезновения заголовка
+
+// $("h2").text("Цели, основные принципы и основной порядок проведения работ по межгосударственной стан* дартизации установлены в ГОСТ 1.0—2015 «Межгосударственная система стандартизации. Основные положения» и ГОСТ 1.2—2015 «Межгосударственная система стандартизации. Стандарты межгосудар-ственные, правила и рекомендации по межгосударственной стандартизации. Правила разработки, при* нятия, обновления и отмены» ").fadeOut(5000).fadeIn(5000); // - заменить текст, затушить потом вернуть текст за 10 сек.
+
+// $("#heading-2_2").fadeOut(1).fadeIn(5000).slideUp(1000); // пример появления заголовка и исчезновения
+// $("#heading-2_2").fadeIn(50000).fadeIn(5000).slideUp(1000);
+
+$("h2").fade(5000);
+$("h2").show(5000);
+
+
 // for (var i = 0; i < 3; i++) {
-//     $("h2").hide(5000);
-//     $("h2").show(5000);
+    // $("h2").hide(5000);
+    // $("h2").show(5000);
 // }
 
 

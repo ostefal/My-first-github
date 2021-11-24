@@ -890,26 +890,47 @@ areArraysSome([1,3,4,5] , [1,2,3,4,5])
 
 DOM - Document Object Model - объектная модель документа.
 heading - заголовок
-get Element By Id // - получить элемент по ID.
-document.getElementById("ID-имя" элемента );// - найти элемент по ID-имени.
-.innerHTML;// - возвращает содержание элемента.
+get Element By Id                                               // - получить элемент по ID.
+document.getElementById("ID-имя" элемента );                    // - найти элемент по ID-имени.
+.innerHTML;                                                     // - возвращает содержание элемента.
 
-Поиск элемента с помощью getElementById
-document.getElementById("main-heading");// - найдёт элемент по ID-имени "main-heading" - главный заголовок.
-var headingElement = document.getElementById("main-heading");// - присвоил переменной значение элемента для удобства
-headingElement.innerHTML; // вернёт содержание элемента
-console.log(headingElement.innerHTML); // выведет значение в консоль
+
+// Поиск элемента с помощью getElementById
+document.getElementById("main-heading");                        // - найдёт элемент по ID-имени "main-heading" - главный заголовок.
+var headingElement = document.getElementById("main-heading");   // - присвоил переменной значение элемента для удобства
+headingElement.innerHTML;                                       // вернёт содержание элемента
+console.log(headingElement.innerHTML);                          // выведет значение в консоль
 console.log(document.getElementById("main-heading").innerHTML); // выведет значение в консоль и таким способом(без переменной)
 
-Меняем текст заголовка через DOM
-var headingElement = document.getElementById("main-heading");// нашли элемент и присвоили его значение переменной
-headingElement.innerHTML;                                   // нашли содержимое элемента
-var newHeadingText = prompt("Введите новый заголовок ");    // нов переменная для нового значения заголовка
-headingElement.innerHTML = newHeadingText;                  // меняем значение заголовка
+
+// Меняем текст заголовка через DOM
+var headingElement = document.getElementById("main-heading");   // нашли элемент и присвоили его значение переменной
+headingElement.innerHTML;                                       // нашли содержимое элемента
+console.log(headingElement.innerHTML);                          // вывели содержание в консоль
+var newHeadingText = prompt("Введите новый заголовок ");        // нов переменная для нового значения заголовка
+headingElement.innerHTML = newHeadingText;                      // меняем значение заголовка
+
+
+// Меняем текст заголовка через DOM спустя 3 сек с помощью функции. 
+function newHading() {      
+    var newHeadingText = prompt("Введите новый заголовок: ");
+    headingElement.innerHTML = newHeadingText;
+}
+setTimeout(newHading,3000);
+
+
+
+
 
 // JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery
 // JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery 
+
+
 Работа с деревом DOM через JQuery
+
+// Подключаем JQuery к HTML-странице
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
 $ // - поиск HTML элементов. Принимает один аргумент - строка селектора.
 # // - id элемента.
@@ -917,26 +938,28 @@ $("#main-heading")// - пример
 .text("на что заменить, изменить");  // - изменить текст
 .append("что добавить");// - добавление записи
 
-Подключаем JQuery к HTML-странице
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-Меняем текст заголовка с помощью jQuery
-.text("замещаемый текст или переменная");// - изменить текст
+// Меняем текст заголовка(элемента) с помощью jQuery
+.text("замещаемый текст или переменная");                   // - изменить текст
 $("# id элемента").text("замещаемый текст или переменная"); // - изменить текст в элементе с id 
-$("#main-heading").text(newHeadingText);// - пример
+$("#main-heading").text(newHeadingText);                    // - пример
 
-setTimeout(wakeUpUser, 5000); // меняем заголовок спустя 5 сек.
+
+// меняем заголовок спустя 5 сек.
+setTimeout(wakeUpUser, 5000);
 function wakeUpUser() {
     var newHeadingText = prompt("Введите новый заголовок: ");
     $("#main-heading").text(newHeadingText);
 }
 
-// - добавить запись
-.append("что добавить"); // - добавление записи
-$("место куда добавить элемент").append("что добавить"); // - добавить элемент
-$("body").append("<p>Это новый параграф </p>");// - пример
+// Создание новых элементов через JQuery
+.append("<h3>что добавить</h3>");                           // - добавление записи. Преобразует HTML в DOM элемент(соответствующий заданым в коде тегам)
+$("место куда добавить элемент").append("<p>параграф</p>"); // - добавить параграф
+$("body").append("<p>Это новый параграф </p>");             // - пример
+
 
 // - пример. Перечисляем и добавляем 3 хобби на страницу спустя 5 сек.
+
 setTimeout(wakeUpUser, 5000);
 function wakeUpUser() {
     for (var i = 0; i < 3; i++) {
@@ -945,25 +968,34 @@ function wakeUpUser() {
     }
 };
 
-// затухание объекта, проявление объекта
-fade out - исчезать
-fade in появляться
-.slideUp(3000); // - выбранный объект исчеснет Уплывая Вверх за 3 секунды.
-.slideDown(5000);// - выбранный объект появится Опускаять Сверху за 3 секунды.
-.fadeOut(3000); // - выбранный элемент исчеснет за 3 секунды.
-.fadeIn(5000);  // - выбранный объект появится через 5 секунд.
-.hide(5000);    // - скрыть элемент в левый верхний угол с затуханием
-.show(5000);    // - вернуть объект из левого верхнего угла после затухания
-.delay(3000);    // - отложить. Отложенное выполнение.
-.fadeTo(2000,0.5);// - выбранный элемент исчеснет за 2 секунды, на половину.
 
-$("элемент").fadeOut(количесво милли секунд);
-$("h2").fadeOut(5000);// - пример
-$("h2").slideUp(5000);// - пример
+
+
+Анимация элементов средствами JQuery
+
+slide Up - здесь поднять
+slide Down - здесь опустить
+fade out - исчезать
+fade in - появляться
+
+
+.slideUp(3000);     // - выбранный объект исчеснет Уплывая Вверх за 3 секунды.
+.slideDown(5000);   // - выбранный объект появится Опускаять Сверху за 3 секунды.
+.fadeOut(3000);     // - выбранный элемент исчеснет за 3 секунды.
+.fadeIn(5000);      // - выбранный объект появится через 5 секунд.
+.hide(5000);        // - скрыть элемент в левый верхний угол с затуханием
+.show(5000);        // - вернуть объект из левого верхнего угла после затухания
+.delay(3000);       // - отложить. Отложенное выполнение.
+.fadeTo(2000,0.5);  // - выбранный элемент исчеснет за 2 секунды, на половину.
+
+
+$("элемент").fadeOut(количесво милли секунд); // элемент исчезнет через заданое количество миллисекунд
+$("h2").fadeOut(5000);  // - пример исчезновения заголовка (затухание)
+$("h2").slideUp(5000);  // - пример появления заголовка (сворачивание, уплывание)
+$("#heading-2_2").fadeOut(1).fadeIn(5000).slideUp(1000); // - пример появления заголовка и исчезновения
 
 // цепной вызов анимации
-// - изменить текст в элементе с id и затушить его через 5 секунд
-$("# id элемента").text("замещаемый текст или переменная").slideUp(5000); // заменить текст и показать 
+$("# id элемента").text("замещаемый текст или переменная").slideUp(5000); // - изменить текст в элементе с id и затушить его через 5 секунд
 $("h2").fadeOut(5000).fadeIn(5000); // - затушить потом вернуть текст за 10 сек.
 
 
