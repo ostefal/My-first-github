@@ -621,13 +621,13 @@
 // $("#heading-2_2").fadeOut(1).fadeIn(5000).slideUp(1000); // пример появления заголовка и исчезновения
 // $("#heading-2_2").fadeIn(50000).fadeIn(5000).slideUp(1000);
 
-$("h2").fade(5000);
-$("h2").show(5000);
+// $("h2").fade(5000);
+// $("h2").show(5000);
 
 
 // for (var i = 0; i < 3; i++) {
-    // $("h2").hide(5000);
-    // $("h2").show(5000);
+//     $("h2").hide(5000);
+//     $("h2").show(5000);
 // }
 
 
@@ -641,7 +641,6 @@ $("h2").show(5000);
 //     "Alexandre",
 //     "Luna"
 // ]
-
 // setTimeout(wakeUpUser, 3000); // 
 // function wakeUpUser() {
 //     $("h1").text("Мои друзья");
@@ -662,7 +661,7 @@ $("h2").show(5000);
 
 
 // // Отложенная анимация
-// $("h2").fadeOut(3000).delay(5000).fadeIn(3000);
+// $("h2").fadeOut(1000).delay(3000).fadeIn(1000);
 
 
 
@@ -673,12 +672,15 @@ $("h2").show(5000);
 //  Интерактивное программирование   Интерактивное программирование   Интерактивное программирование   Интерактивное программирование
 //  Интерактивное программирование   Интерактивное программирование   Интерактивное программирование   Интерактивное программирование
 
-// function timeUp() {
+
+
+// // таймер с напоминанием
+// function timeUp() {                     // создал функцию с напоминанием
 //     alert("Время вышло");
-// }
-// setTimeout(timeUp,3000);
-// var timeoutId = setTimeout(timeUp,10000);// сохранил ID для отмены таймера
-// clearTimeout(timeoutId);// отменил таймер, сработет сразу
+// };
+// // setTimeout(timeUp,5000);             // - вызвали функцию с отложенным запуском.
+// var timeoutId = setTimeout(timeUp,3000);// сохранил ID для отмены таймера
+// clearTimeout(timeoutId);  
 
 
 // var doHomeWorkAlarm = function () {
@@ -688,12 +690,12 @@ $("h2").show(5000);
 // clearTimeout(timeoutID);
 
 
-// var couter = 5;
+// var couter = 1;
 // var printMassage = function(){
 //     console.log("Ты смотришь в консоль уже "+couter+" сек");
-//     couter+=5;
+//     couter++;
 // };
-// var intervalId = setInterval(printMassage,5000);
+// var intervalId = setInterval(printMassage,1000);
 // // clearInterval(intervalId);
 
 
