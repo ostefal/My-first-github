@@ -709,25 +709,28 @@
 //     leftOffset=0;           // обнулиться/начать заново.
 //     }
 // };
-// setInterval(moveHeading,100) // вызывать функцию каждые 30 миллисекунд.
+// setInterval(moveHeading,30) // вызывать функцию каждые 30 миллисекунд.
 
 
 
-// реакция на Клики
+// // реакция на Клики
 // function clickHandler(event) {
-//     console.log("Клик! "+event.pageX+" "+event.pageY);
+//     console.log("Клик! "+ event.pageX +" "+ event.pageY);
 // };
 // $("html").click(clickHandler);
 
 
 
-// // заголовок heading двигается за указателем мыши
-// $("html").mousemove(function (event) {
-//     $("#heading").offset({
-//         left: event.pageX,
-//         top: event.pageY
-//     });
-// });
+// заголовок heading двигается за указателем мыши
+$("html").mousemove(moveMouse)
+    function moveMouse (event) {
+    $("#heading").offset({
+        left: event.pageX,
+        top: event.pageY
+    });
+};
+
+
 
 
 // // заголовок heading двигается за кликом мыши

@@ -1012,8 +1012,11 @@ $("h2").fadeOut(1000).delay(3000).fadeIn(1000);
 set timeout - установить время задержки
 clear timeout - отменить задержку
 set interval - задать интервал
-offset - отступ слева
+offset - отступ
 couter - счётчик
+move heading - подвинуть заголовок
+handler - обработчик
+event - событие,  явление
 
 
 
@@ -1023,13 +1026,16 @@ setInterval(func,interval);// многократный запуск кода- и
 clearInterval(intervalId);// остановка интервала
 .offset({left: 1000}); // вставить слева 1000 пикселей
 .offset({top: 1000}); // вставить сверху 1000 пикселей
+event.pageX - координаты курсора Х
+event.pageY - координаты курсора Y
 .pageX - свойство объекта (значение координаты Х)
 .pageY - свойство объекта (значение координаты У)
 .click(func); // Функция выполняется, когда пользователь щелкает элемент
-.mousemove() - обработчик события Передвижение мыши // следит за передвижением мыши
+.mousemove() - обработчик события Передвижение мыши // следит за передвижением мыши. Как только мышь переместиться запуститься код в скобках
 
 
-// таймер с напоминанием
+// Отложеное выполнение кода. 
+// Таймер с напоминанием
 function timeUp() {                     // создал функцию с напоминанием
     alert("Время вышло");
 };
@@ -1038,7 +1044,8 @@ var timeoutId = setTimeout(timeUp,3000);// сохранил ID для отмен
 clearTimeout(timeoutId);                // отменил таймер, функция не запустится.
 
 
-// интервальная функция - счёт времени в секундах
+// Многократный запуск кода. 
+// Интервальная функция - счёт времени в секундах
 var couter = 1;
 var printMassage = function(){
     console.log("Ты смотришь в консоль уже "+couter+" сек");
@@ -1048,6 +1055,7 @@ var intervalId = setInterval(printMassage,1000);// сохранил ID для о
 // clearInterval(intervalId); // отмена интервала
 
 
+// Анимация элементов с помощью setInterval
 // бегающая строка
 var leftOffset = 0; // отступ слева
 function moveHeading() { // подвинуть заголовок
@@ -1060,20 +1068,32 @@ function moveHeading() { // подвинуть заголовок
 setInterval(moveHeading,30) // вызывать функцию каждые 30 миллисекунд.
 
 
-// реакция на Клики
-function clickHandler(event) {
-    console.log("Клик! "+event.pageX+" "+event.pageY);
+
+// Реакция на Клики
+function clickHandler(event) {                          // функция с аргументом  event
+    console.log("Клик! "+ event.pageX +" "+ event.pageY);  // в аргумент event передаются координаты и выводится в консоль
 };
-$("h1").click(clickHandler);
+$("h1").click(clickHandler);                            // активируем функцию при нажатии(click) на элемент h1
 
 
+// Событие mousemove
 // заголовок heading двигается за указателем мыши
-$("html").mousemove(function (event) {
+$("html").mousemove(function (event) {  // в данном случае аргумент это функция целиком. Функцию можно прописать отдельно. Как только мышь касается элемента HTML запускается функция
+    $("#heading").offset({              // в функции находим элемент heading и прибавляем пиксалей слева и справа
+        left: event.pageX,              // значения берём из элемента event
+        top: event.pageY                // 
+    });
+});
+
+// то же самое только через отдельную функцию
+$("html").mousemove(moveMouse)
+
+    function moveMouse (event) {
     $("#heading").offset({
         left: event.pageX,
         top: event.pageY
     });
-});
+};
 
 
 // заголовок heading двигается за кликом мыши
