@@ -721,15 +721,14 @@
 
 
 
-// заголовок heading двигается за указателем мыши
-$("html").mousemove(moveMouse)
-    function moveMouse (event) {
-    $("#heading").offset({
-        left: event.pageX,
-        top: event.pageY
-    });
-};
-
+// // заголовок heading двигается за указателем мыши
+// $("html").mousemove(moveMouse)
+//     function moveMouse (event) {
+//     $("#heading").offset({
+//         left: event.pageX,
+//         top: event.pageY
+//     });
+// };
 
 
 
@@ -740,11 +739,16 @@ $("html").mousemove(moveMouse)
 //         top: ev.pageY
 //     });
 // });
-// // и показывает их координаты в консоли
-// function clickHandler(ev) {
-//     console.log("Клик! "+ev.pageX+" "+ev.pageY);
-// };
-// $("html").click(clickHandler);
+
+// и показывает их координаты в консоли
+// $("html").click(function (ev) {
+//     $("#heading").offset({
+//         left: ev.pageX,
+//         top: ev.pageY});
+//         console.log("Клик! "+ev.pageX+" "+ev.pageY);
+// }
+// );
+
 
 
 
