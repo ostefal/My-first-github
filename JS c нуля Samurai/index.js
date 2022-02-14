@@ -25,15 +25,22 @@
 
 // Урок 8
 
-var helloMessageElement;
+var firstName_El;
+firstName_El = document.getElementById("firstName_Id");
 
-var helloMessageId = "hello-massage"
-helloMessageElement = document.getElementById(helloMessageId);
+var LastName;
+LastName = document.getElementById("LastName_Id")
 
-window.alert(helloMessageElement.value);
-window.alert(helloMessageElement.id);
+var Address;
+Address = document.getElementById("Address_Id")
 
-// var hello;
-// hello = "Hello";
+window.alert(firstName_El.value);
+window.alert(LastName.value);
+window.alert(Address.value);
 
-// window.alert(hello);
+
+var Sity_list;
+Sity_list = document.getElementById("Sity list");
+
+console.log(Sity_list.value);
+window.alert(Sity_list.value);
