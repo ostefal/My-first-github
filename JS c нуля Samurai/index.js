@@ -68,3 +68,4 @@ var myPhotoPic = document.getElementById("myPhotoPic")
 
 firstName_El.value = "Смена имени";
 LastName.value = "Смена фамилии";
+
