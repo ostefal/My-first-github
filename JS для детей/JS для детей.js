@@ -1242,3 +1242,18 @@ width - высота
 height - ширина
 distance - расстояние
 
+
+
+
+
+
+
+
+
+// JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai
+// JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai
+// JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai  // JS с нуля Samurai
+
+
+.setAttribute - установи атрибут элементу.
+LastName.setAttribute("value","kamasutra");

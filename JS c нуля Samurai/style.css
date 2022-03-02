@@ -1,8 +1,16 @@
 img {
-    width: 150px;
+    width: 300px;
 }
 
 #JS {
     color: aquamarine;
 }
 
+.firstNameClass{
+    border: rgb(255, 200, 180) 3px solid;
+}
+
+.error-input{
+    border: 3px red dashed;
+    padding: 5px;
+}

@@ -25,14 +25,11 @@
 
 // Урок 8
 
-var firstName_El;
-firstName_El = document.getElementById("firstName_Id");
+var firstName_El = document.getElementById("firstName_Id");
 
-var LastName;
-LastName = document.getElementById("LastName_Id")
+var LastName = document.getElementById("LastName_Id")
 
-var Address;
-Address = document.getElementById("Address_Id")
+var Address = document.getElementById("Address_Id")
 
 // window.alert(firstName_El.value);
 // window.alert(LastName.value);
@@ -45,11 +42,13 @@ var Sity_list = document.getElementById("Sity list");
 // window.alert(Sity_list.value);
 
 
-myHobby = document.getElementById("myHobby_ID");
+var myHobby = document.getElementById("myHobby_ID");
 // window.alert(myHobby.value);
 
 var myPhoto = document.getElementById("myPhoto_ID")
-// window.alert(myPhoto_ID.value);
+window.alert(myPhoto.value);
+window.alert(myPhoto.innerHTML);
+
 
 var myPhotoPic = document.getElementById("myPhotoPic")
 
@@ -67,5 +66,19 @@ var myPhotoPic = document.getElementById("myPhotoPic")
 // console.log(myPhotoPic.src);
 
 firstName_El.value = "Смена имени";
-LastName.value = "Смена фамилии";
+firstName_El.title = "А сюда нужно ввести Имя";
 
+LastName.setAttribute("value","kamasutra");
+
+
+// window.alert(LastName.className);
+
+LastName.className = "error-input";
+myPhotoPic.src = "https://avatars.mds.yandex.net/get-zen_doc/1639101/pub_611768146eab3f04defe25d7_6117687f7e37175eb6759ed8/scale_1200";
+
+console.log(Sity_list.value);
+Sity_list.value = "3";
+console.log(Sity_list.value);
+myHobby.value = "Да, нет у меня хобби";
+
+// myPhoto.value = 
