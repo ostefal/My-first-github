@@ -2,7 +2,7 @@
 
 // setInterval(function(){
 //     var messageInput = document.getElementById("message");
-//     window.alert(messageInput.value);
+//     console.log(messageInput.value);
 // }, 4000);
 
 // Урок 02.
@@ -10,9 +10,9 @@
 // var str1;
 // str1 = "number1";
 
-// window.alert(str1);
-// window.alert("Number 2");
-// window.alert("Number 3");
+// console.log(str1);
+// console.log("Number 2");
+// console.log("Number 3");
 
 // var wordCat;
 // wordCat = "Cat";
@@ -20,65 +20,119 @@
 // var translateOfWordCat;
 // translateOfWordCat = "Кот";
 
-// window.alert(wordCat);
-// window.alert(translateOfWordCat);
+// console.log(wordCat);
+// console.log(translateOfWordCat);
 
 // Урок 8
 
-var firstName_El = document.getElementById("firstName_Id");
+// var firstName_El = document.getElementById("firstName_Id");
 
-var LastName = document.getElementById("LastName_Id")
+// var LastName = document.getElementById("LastName_Id")
 
-var Address = document.getElementById("Address_Id")
+// var Address = document.getElementById("Address_Id")
 
-// window.alert(firstName_El.value);
-// window.alert(LastName.value);
-// window.alert(Address.value);
+// // console.log(firstName_El.value);
+// // console.log(LastName.value);
+// // console.log(Address.value);
 
 
-var Sity_list = document.getElementById("Sity list");
+// var Sity_list = document.getElementById("Sity list");
+
+// // console.log(Sity_list.value);
+// // console.log(Sity_list.value);
+
+
+// var myHobby = document.getElementById("myHobby_ID");
+// // console.log(myHobby.value);
+
+// var myPhoto = document.getElementById("myPhoto_ID")
+// console.log(myPhoto.value);
+// console.log(myPhoto.innerHTML);
+
+
+// var myPhotoPic = document.getElementById("myPhotoPic")
+
+// // console.log(myPhoto_ID.innerHTML);
+// // console.log(myPhoto_ID.innerHTML);
+
+// // console.log(myHobby_ID.innerHTML);
+// // console.log(myHobby_ID.innerHTML);
+
+// // console.log(Sity_list.innerHTML);
+// // console.log(Sity_list.innerHTML);
+
+// // console.log(myPhotoPic.src);
+// // console.log(myPhotoPic.alt);
+// // console.log(myPhotoPic.src);
+
+// firstName_El.value = "Смена имени";
+// firstName_El.title = "А сюда нужно ввести Имя";
+
+// LastName.setAttribute("value","kamasutra");
+
+
+// // console.log(LastName.className);
+
+// LastName.className = "error-input";
+// myPhotoPic.src = "https://avatars.mds.yandex.net/get-zen_doc/1639101/pub_611768146eab3f04defe25d7_6117687f7e37175eb6759ed8/scale_1200";
 
 // console.log(Sity_list.value);
-// window.alert(Sity_list.value);
+// Sity_list.value = "3";
+// console.log(Sity_list.value);
+// myHobby.value = "Да, нет у меня хобби";
+
+// debugger;
 
 
-var myHobby = document.getElementById("myHobby_ID");
-// window.alert(myHobby.value);
+// // myPhoto.value = 
 
-var myPhoto = document.getElementById("myPhoto_ID")
-window.alert(myPhoto.value);
-window.alert(myPhoto.innerHTML);
+// function alertValue() {
+//     console.log(myPhoto.value);
+//     console.log(myPhoto.innerHTML)
+// }
 
+// alertValue();
 
-var myPhotoPic = document.getElementById("myPhotoPic")
+var znachenie = document.getElementById("Это_ID");
+var firstNameEl = document.getElementById("firstName_Id");
+var LastName = document.getElementById("LastName_Id");
+var AddressName = document.getElementById("Address_Id");
+var SityEl = document.getElementById("Sity list");
+var myPhoto = document.getElementById("myPhoto_ID");
+var myPhotoPic = document.getElementById("myPhotoPic");
 
-// window.alert(myPhoto_ID.innerHTML);
-// console.log(myPhoto_ID.innerHTML);
-
-// window.alert(myHobby_ID.innerHTML);
-// console.log(myHobby_ID.innerHTML);
-
-// window.alert(Sity_list.innerHTML);
-// console.log(Sity_list.innerHTML);
-
-// window.alert(myPhotoPic.src);
-// console.log(myPhotoPic.alt);
-// console.log(myPhotoPic.src);
-
-firstName_El.value = "Смена имени";
-firstName_El.title = "А сюда нужно ввести Имя";
-
-LastName.setAttribute("value","kamasutra");
-
-
-// window.alert(LastName.className);
-
-LastName.className = "error-input";
-myPhotoPic.src = "https://avatars.mds.yandex.net/get-zen_doc/1639101/pub_611768146eab3f04defe25d7_6117687f7e37175eb6759ed8/scale_1200";
-
-console.log(Sity_list.value);
-Sity_list.value = "3";
-console.log(Sity_list.value);
-myHobby.value = "Да, нет у меня хобби";
-
-// myPhoto.value = 
+function alertZnachenie() {
+    console.log(znachenie.value)
+    console.log(znachenie.className)
+}
+function alertFirstName() {
+    console.log(firstNameEl.value)
+    console.log(firstNameEl.className)
+}
+function alertLastName() {
+    console.log(LastName.value)
+    console.log(LastName.className)
+}
+function alertAddressName() {
+    console.log(AddressName.value)
+    console.log(AddressName.className)
+}
+function alertSityEl() {
+    console.log(SityEl.value)
+    console.log(SityEl.className)
+}
+function alertMyPhoto() {
+    console.log(myPhoto.value)
+    console.log(myPhoto.className)
+}
+function alertMyPhotoPic() {
+    console.log(myPhotoPic.value)
+    console.log(myPhotoPic.className)
+}
+alertZnachenie();
+alertFirstName();
+alertLastName();
+alertAddressName();
+alertSityEl();
+alertMyPhoto();
+alertMyPhotoPic();

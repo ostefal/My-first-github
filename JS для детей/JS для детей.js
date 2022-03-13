@@ -1257,3 +1257,4 @@ distance - расстояние
 
 .setAttribute - установи атрибут элементу.
 LastName.setAttribute("value","kamasutra");
+debugger - остановка выполнения кода
