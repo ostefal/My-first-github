@@ -93,46 +93,84 @@
 
 // alertValue();
 
-var znachenie = document.getElementById("Это_ID");
-var firstNameEl = document.getElementById("firstName_Id");
-var LastName = document.getElementById("LastName_Id");
-var AddressName = document.getElementById("Address_Id");
-var SityEl = document.getElementById("Sity list");
-var myPhoto = document.getElementById("myPhoto_ID");
-var myPhotoPic = document.getElementById("myPhotoPic");
+// var znachenie = document.getElementById("Это_ID");
+// var firstNameEl = document.getElementById("firstName_Id");
+// var LastName = document.getElementById("LastName_Id");
+// var AddressName = document.getElementById("Address_Id");
+// var SityEl = document.getElementById("Sity list");
+// var myPhoto = document.getElementById("myPhoto_ID");
+// var myPhotoPic = document.getElementById("myPhotoPic");
 
-function alertZnachenie() {
-    console.log(znachenie.value)
-    console.log(znachenie.className)
+// function alertZnachenie() {
+//     console.log(znachenie.value)
+//     console.log(znachenie.className)
+// }
+// function alertFirstName() {
+//     console.log(firstNameEl.value)
+//     console.log(firstNameEl.className)
+// }
+// function alertLastName() {
+//     console.log(LastName.value)
+//     console.log(LastName.className)
+// }
+// function alertAddressName() {
+//     console.log(AddressName.value)
+//     console.log(AddressName.className)
+// }
+// function alertSityEl() {
+//     console.log(SityEl.value)
+//     console.log(SityEl.className)
+// }
+// function alertMyPhoto() {
+//     console.log(myPhoto.value)
+//     console.log(myPhoto.className)
+// }
+// function alertMyPhotoPic() {
+//     console.log(myPhotoPic.value)
+//     console.log(myPhotoPic.className)
+// }
+// alertZnachenie();
+// alertFirstName();
+// alertLastName();
+// alertAddressName();
+// alertSityEl();
+// alertMyPhoto();
+// alertMyPhotoPic();
+
+// function alertValueAndClass(elementParametr) {
+//     // debugger;
+//     console.log(elementParametr.value);
+//     console.log(elementParametr.className);
+// }
+// alertValueAndClass(znachenie);
+// alertValueAndClass(firstNameEl);
+// alertValueAndClass(LastName);
+// alertValueAndClass(AddressName);
+// alertValueAndClass(SityEl);
+// alertValueAndClass(myPhoto);
+// alertValueAndClass(myPhotoPic);
+
+function LogValue(Element) {
+    var ID = document.getElementById(Element);
+    console.log(ID.value);
 }
-function alertFirstName() {
-    console.log(firstNameEl.value)
-    console.log(firstNameEl.className)
+function getValue(Element) {
+    var ID = document.getElementById(Element);
+    return ID.value;
 }
-function alertLastName() {
-    console.log(LastName.value)
-    console.log(LastName.className)
-}
-function alertAddressName() {
-    console.log(AddressName.value)
-    console.log(AddressName.className)
-}
-function alertSityEl() {
-    console.log(SityEl.value)
-    console.log(SityEl.className)
-}
-function alertMyPhoto() {
-    console.log(myPhoto.value)
-    console.log(myPhoto.className)
-}
-function alertMyPhotoPic() {
-    console.log(myPhotoPic.value)
-    console.log(myPhotoPic.className)
-}
-alertZnachenie();
-alertFirstName();
-alertLastName();
-alertAddressName();
-alertSityEl();
-alertMyPhoto();
-alertMyPhotoPic();
+var firstName = "firstName_Id";
+var LastName = "LastName_Id";
+
+LogValue(firstName);
+LogValue(LastName);
+
+// getValue(firstName);
+// getValue(LastName);
+
+var firstNameValue = getValue(firstName);
+var LastNameValue = getValue(LastName);
+
+window.alert(firstNameValue);
+window.alert(LastNameValue);
+
+
