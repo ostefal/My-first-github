@@ -1,0 +1,21 @@
+h1{
+  color: rgb(111, 111, 224);
+  font-weight: 400;
+  font-size: 42px;
+}
+
+p{
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+blockquote{
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  color: rgb(111, 111, 224);
+  font-style: italic;
+}
