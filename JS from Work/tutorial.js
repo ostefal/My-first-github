@@ -4,58 +4,12 @@
 //     w   _   $
 Потом могут следовать буквы, цифры, подчеркивания и знаки доллара — в любом количестве
 
-Функции:
-alert();
-document.write();
-console.log();
-
 if (команды JS) {
 
-    break
-case
-catch
-class
-const
-    continue
-    debugger
-default
-    delete
-do
-else - иначе;
-    enum
-export
-extends
-    false - ложь;
-finally
-for         - для;
-        function
-if          - если;
-    implements
-    import
-in
-instanceof
-        interface
-    let
-    new
-        package
-    private
-    protected
-    public
-    return
-    static
-    super
-        switch
-    this
-    throw
-    true - истина;
-    try
-typeof
-var            - variable - переменная;
-    void
-while          - пока;
-    with
-yield
-
+    break case catch class const continue debugger default delete do else - иначе;
+    enum export extends false - ложь; finally for - для; function if - если;
+    implements import in instanceof interface let new package private protected public return static super switch this throw true - истина;
+    try typeof var - variable - переменная; void while - пока; with yield
 }
 
 "Dear " + "Reader" + "," Эти строки «сцепляются» в новую строку «Dear Reader,»
@@ -92,8 +46,8 @@ if (scoops >= 5) {
 var name = "Joe";
 var i = 0;
 while (i < 2) {
-document.write("Happy Birthday to you.<br>");
-i = i + 1;
+    document.write("Happy Birthday to you.<br>");
+    i = i + 1;
 }
 document.write("Happy Birthday dear " + name + ",<br>");
 document.write("Happy Birthday to you.<br>");
